@@ -1,90 +1,103 @@
+"use client";
+
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import Button from "../atoms/button";
 
-import { Menu } from "lucide-react";
+// Reusable navigation links
+const navLinks = [
+  { href: "/", label: "Accueil" },
+  { href: "/projects", label: "Projets" },
+  { href: "/about", label: "À Propos de Nous" },
+  { href: "/contact", label: "Contactez-nous" },
+];
 
 function NavigationBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="bg-[#1e2236] shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-28">
-          <div className="flex items-center space-x-2">
-            <Image
-              src="/assets/bigemip-logo.jpeg"
-              alt="BIGEMIP Logo"
-              className="h-10 w-auto"
-              width={100}
-              height={100}
-            />
-            <span className="text-white font-bold text-xl tracking-wide">
-              BIGEMIP
-            </span>
-          </div>
+    <>
+      <nav className="bg-[#1e2236] shadow-lg sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-center h-28">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/assets/bigemip-logo.jpeg"
+                alt="BIGEMIP Logo"
+                className="h-10 w-auto"
+                width={100}
+                height={100}
+                priority
+              />
+              <span className="text-white font-bold text-xl tracking-wide">
+                BIGEMIP
+              </span>
+            </Link>
 
-          <div className="hidden xl:flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-[#f0a500] text-lg hover:text-white transition"
-            >
-              Acceuil
-            </Link>
-            <Link
-              href="/projects"
-              className="text-[#f0a500] text-lg hover:text-white transition"
-            >
-              Projets
-            </Link>
-            <Link
-              href="/team"
-              className="text-[#f0a500] text-lg hover:text-white transition"
-            >
-              Notre Equipe
-            </Link>
-            <Link
-              href="/about"
-              className="text-[#f0a500] text-lg hover:text-white transition"
-            >
-              A Propos de Nous
-            </Link>
-            <Link
-              href="/contact"
-              className="text-[#f0a500] text-lg hover:text-white transition"
-            >
-              Contactez-nous
-            </Link>
-          </div>
-          <div className="hidden xl:flex items-center w-fit ">
-            <Button buttonText="Contactez-nous" type="submit" />
-          </div>
+            {/* Desktop Links */}
+            <div className="hidden xl:flex items-center space-x-8">
+              {navLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-[#f0a500] text-lg hover:text-white transition"
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
 
-          <div className="xl:hidden flex items-center">
-            <button id="menu-btn" className="text-[#f0a500] focus:outline-none">
-              <Menu />
+            {/* Contact Button (Desktop only) */}
+            <div className="hidden xl:flex items-center">
+              <Link href="/contact">
+                <Button buttonText="Contactez-nous" type="button" />
+              </Link>
+            </div>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              aria-label="Toggle navigation menu"
+              aria-expanded={isOpen}
+              className="xl:hidden text-[#f0a500] focus:outline-none"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X /> : <Menu />}
             </button>
           </div>
         </div>
-      </div>
+      </nav>
 
-      <div id="mobile-menu" className="hidden xl:hidden px-6 pb-4">
-        <Link href="#" className="block py-2 text-[#f0a500] hover:text-white">
-          Home
-        </Link>
-        <Link href="#" className="block py-2 text-[#f0a500] hover:text-white">
-          About
-        </Link>
-        <Link href="#" className="block py-2 text-[#f0a500] hover:text-white">
-          Contact
-        </Link>
-        <Link href="#" className="block py-2 text-[#f0a500] hover:text-white">
-          Projects
-        </Link>
-        <Link href="#" className="block py-2 text-[#f0a500] hover:text-white">
-          Teams
-        </Link>
-        <Button buttonText="Contactez-nous" type="submit" />
-      </div>
-    </nav>
+      {isOpen && (
+        <div className="fixed inset-0 bg-[#1e2236] flex flex-col justify-center items-center gap-14 z-50 overflow-hidden">
+          <span
+            className="text-[#f0a500] text-3xl"
+            onClick={() => setIsOpen(false)}
+          >
+            <X />
+          </span>
+
+          <Link
+            href="/"
+            className="flex items-center space-x-2 font-extrabold text-4xl tracking-wide text-[#f0a500]"
+          >
+            BIGEMIP
+          </Link>
+
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-[#f0a500] text-lg hover:text-white transition"
+              onClick={() => setIsOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 

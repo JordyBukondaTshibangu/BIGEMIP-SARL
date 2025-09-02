@@ -7,7 +7,7 @@ type ButtonProps = {
 function Button({ buttonText, type, disabled }: ButtonProps) {
   return (
     <button
-      className="
+      className=" w-full
     bg-amber-500 hover:bg-amber-600 active:bg-amber-700 
     cursor-pointer text-white font-medium py-4 px-8 rounded uppercase
     focus:ring-2 focus:ring-amber-400 focus:outline-none

@@ -8,8 +8,8 @@ const imagesSite = [
 ];
 function BGPSites() {
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
-      <div className="max-w-7xl w-full mx-auto flex flex-col gap-8 ">
+    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-32 bg-[#1e2236]">
+      <div className="max-w-7xl w-full mx-auto flex flex-col gap-14">
         <h1 className="text-3xl font-bold text-amber-500">Nos Sites</h1>
         <p className="text-base leading-8 text-white">
           La société BIGEMIP est un bureau qui offre ses services

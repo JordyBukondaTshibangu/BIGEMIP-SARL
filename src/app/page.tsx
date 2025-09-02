@@ -1,3 +1,4 @@
+import BGPGetInTouch from "@/components/molecules/_common/get-in-touch";
 import BGPActualities from "@/components/molecules/home/bgp-actualities";
 import BGPDescription from "@/components/molecules/home/bgp-description";
 import BGPEvents from "@/components/molecules/home/bgp-events";
@@ -14,6 +15,7 @@ export default function Home() {
       <BGPActualities />
       <BGPSites />
       <BGPProjectsShowCases />
+      <BGPGetInTouch />
     </div>
   );
 }

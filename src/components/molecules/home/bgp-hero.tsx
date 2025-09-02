@@ -1,4 +1,5 @@
 import Button from "@/components/atoms/button";
+import Link from "next/link";
 
 function BGPHero() {
   return (
@@ -19,8 +20,12 @@ function BGPHero() {
             aidée par les technologies les plus avancées.
           </p>
           <div className="flex flex-col md:flex-row gap-6">
-            <Button buttonText="Consultez-nous" />
-            <Button buttonText="Decouvrez nos Projets" />
+            <Link href="/contact">
+              <Button buttonText="Consultez-nous" />
+            </Link>
+            <Link href="/projects">
+              <Button buttonText="Decouvrez nos Projets" />
+            </Link>
           </div>
         </div>
       </div>

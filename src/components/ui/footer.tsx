@@ -30,27 +30,25 @@ function Footer() {
     {
       icon: <Mail size={30} color="#f99c00" />,
       title: "Envoyez-nous un email",
-      value: "support@domain.com",
+      value: "support@bigemip.com",
     },
     {
       icon: <MapPin size={30} color="#f99c00" />,
       title: "Notre Adresse",
-      value: "Boulevard du 30 Juin, 2eme et 3eme etages.",
+      value: "9, Avenue du Port, GOMBE, KINSHASA, RDC",
     },
   ];
 
   const quickLinks = [
     { label: "A Propos de Nous", href: "/about" },
     { label: "Nos Projects", href: "/projects" },
-    { label: "Nos Services", href: "/services" },
+    { label: "Nos Services", href: "/projects" },
     { label: "Contactez-nous", href: "/contact" },
   ];
 
   const legalLinks = [
     { label: "Politique de Confidentialite", href: "/privacy-policy" },
     { label: "Termes et Conditions", href: "/terms-and-conditions" },
-    { label: "Politique de Remboursement", href: "/refund-policy" },
-    { label: "Avertissements", href: "/disclaimer" },
     { label: "Support", href: "/support" },
     { label: "FAQ", href: "/faq" },
   ];

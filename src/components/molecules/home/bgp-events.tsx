@@ -45,7 +45,7 @@ const events: { [key: string]: string }[] = [
 
 function BGPEvents() {
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
+    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-32 bg-[#1e2236]">
       <div className="max-w-7xl w-full mx-auto flex flex-col gap-8 ">
         <h1 className="text-3xl font-bold text-amber-500">Événements</h1>
 

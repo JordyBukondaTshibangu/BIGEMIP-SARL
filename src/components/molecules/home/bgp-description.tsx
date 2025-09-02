@@ -2,12 +2,12 @@ import Image from "next/image";
 
 function BGPDescription() {
   return (
-    <section className="max-w-7xl w-full mx-auto flex flex-col gap-12 px-5 py-20">
+    <section className="max-w-7xl w-full mx-auto flex flex-col gap-12 px-5 py-24">
       <h1 className="text-3xl font-bold text-amber-500">
         Bienvenue sur BIGEMIP
       </h1>
       <div className="flex flex-col md:flex-row justify-between gap-10">
-        <div className="flex-1 bg-red-300 min-h-full w-full">
+        <div className="flex-1 min-h-full w-full">
           <Image
             src="/assets/bigemip-image-4.jpg"
             alt="BIGEMIP Image"
