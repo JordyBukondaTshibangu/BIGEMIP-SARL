@@ -2,7 +2,7 @@ import * as motion from "motion/react-client";
 
 export default function BGPVision() {
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
+    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 pb-56 bg-[#1e2236]">
       <div className="max-w-7xl mx-auto w-full flex flex-col = gap-14">
         <div className="flex flex-col gap-6 md:w-3/4">
           <motion.h1
@@ -24,48 +24,32 @@ export default function BGPVision() {
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">1</span>
             <span className="text-lg font-medium text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              earum totam ut inventore quia? Harum dolor laborum ad minus
+              Collaboration avec des sociétés de services américaines,
+              françaises, tunisiennes et émiraties.
             </span>
           </div>
 
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">2</span>
             <span className="text-lg font-medium text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              Proposition de solutions technologiques adaptées aux enjeux des
+              secteurs miniers et pétroliers.
             </span>
           </div>
 
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">3</span>
             <span className="text-lg font-medium text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              earum or laborum ad minus
+              Accompagnement dans l’exploration minière et pétrolière de manière
+              optimale et ciblée.
             </span>
           </div>
 
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">4</span>
             <span className="text-lg font-medium text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              earum
-            </span>
-          </div>
-
-          <div className="flex gap-6">
-            <span className="text-6xl font-semibold text-white">5</span>
-            <span className="text-lg font-medium text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque m
-              dolor laborum ad minus omnis!
-            </span>
-          </div>
-
-          <div className="flex gap-6">
-            <span className="text-6xl font-semibold text-white">6</span>
-            <span className="text-lg font-medium text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              earum totam ut inventore quia? Harum dolor laborum ad minuso
-              omnis!
+              Utilisation des technologies les plus avancées pour maximiser les
+              résultats.
             </span>
           </div>
         </motion.div>
