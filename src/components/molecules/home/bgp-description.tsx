@@ -28,8 +28,7 @@ function BGPDescription() {
             <h2 className="text-3xl font-bold">Un appercu de BIGEMIP SARL</h2>
           </div>
           <p className="text-base leading-8">
-            Le Bureau d&apos;Investigations Géologique, Minière et Pétrolière
-            SARL,
+            Le Bureau d&apos;Investigations Géologique, Minière et Pétrolière,
             <span>BIGEMIP SARL</span> vous accompagne dans l&apos;exploration
             minière optimale et ciblée, aidée par les technologies les plus
             avancées.
@@ -46,7 +45,7 @@ function BGPDescription() {
               recherche géologique, minière.
             </li>
             <li className="text-base leading-7">
-              Nous proposons les études listées ci-après, de manière spécifique
+              Nous proposons les études listées ci-dessus, de manière spécifique
               ou globale selon vos besoins.
             </li>
           </ol>

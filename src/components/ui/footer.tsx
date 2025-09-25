@@ -41,8 +41,8 @@ function Footer() {
 
   const quickLinks = [
     { label: "A Propos de Nous", href: "/about" },
-    { label: "Nos Projects", href: "/projects" },
-    { label: "Nos Services", href: "/projects" },
+    { label: "Nos Projets", href: "/services" },
+    { label: "Nos Services", href: "/services" },
     { label: "Contactez-nous", href: "/contact" },
   ];
 

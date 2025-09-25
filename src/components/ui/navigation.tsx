@@ -6,12 +6,10 @@ import Link from "next/link";
 import { useState } from "react";
 import Button from "../atoms/button";
 
-// Reusable navigation links
 const navLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/projects", label: "Projets" },
+  { href: "/services", label: "Nos Services" },
   { href: "/about", label: "À Propos de Nous" },
-  { href: "/contact", label: "Contactez-nous" },
 ];
 
 function NavigationBar() {

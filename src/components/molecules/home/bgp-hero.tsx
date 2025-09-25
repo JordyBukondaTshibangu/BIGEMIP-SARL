@@ -17,19 +17,16 @@ function BGPHero() {
               BIGEMIP SARL
             </span>
             <span className="block font-bold">
-              Le Bureau d&apos;Investigations Géologique, Minière et Pétrolière
-              SARL
+              Bureau d&apos;Investigations Géologique, Minière et Pétrolière
+              SARL.
             </span>
           </h1>
           <p className="text-lg text-white md:text-center w-3/5">
-            vous accompagne dans l&apos;exploration minière optimale et ciblée,
-            aidée par les technologies les plus avancées.
+            BIGEMIP vous accompagne dans l&apos;exploration minière optimale et
+            ciblée, aidée par les technologies les plus avancées.
           </p>
           <div className="flex flex-col md:flex-row gap-6">
-            <Link href="/contact">
-              <Button buttonText="Consultez-nous" />
-            </Link>
-            <Link href="/projects">
+            <Link href="/services">
               <Button buttonText="Decouvrez nos Projets" />
             </Link>
           </div>
