@@ -13,7 +13,7 @@ const ServiceCard = ({
     <div className="flex flex-col gap-2">{icon}</div>
     <div className="flex flex-col gap-2">
       <h4 className="text-lg md:text-xl font-medium text-black">{title}</h4>
-      <p className="text-sm md:text-md text-gray-600 leading-7">
+      <p className="text-sm md:text-md text-gray-600 leading-7 h-28">
         {description}
       </p>
       <Link href="/services">

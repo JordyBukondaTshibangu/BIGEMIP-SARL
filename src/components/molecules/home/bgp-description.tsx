@@ -1,8 +1,14 @@
+import * as motion from "motion/react-client";
 import Image from "next/image";
 
 function BGPDescription() {
   return (
-    <section className="max-w-7xl w-full mx-auto flex flex-col gap-12 px-5 py-24">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="max-w-7xl w-full mx-auto flex flex-col gap-12 px-5 py-24"
+    >
       <h1 className="text-3xl font-bold text-amber-500">
         Bienvenue sur BIGEMIP
       </h1>
@@ -46,7 +52,7 @@ function BGPDescription() {
           </ol>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

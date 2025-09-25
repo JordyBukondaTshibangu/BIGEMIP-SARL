@@ -50,7 +50,10 @@ function BGPMap() {
           <ContactInfo
             icon={BriefcaseBusiness}
             title="Informations legales"
-            details={["David Mutumbo", "Fiscal ID: 123456789"]}
+            details={[
+              "David Mutumbo",
+              "Fiscal ID: RCCM CD/KNG/ RCCM/23-B-02483 et IDNAT : 01-B0500-N40997H",
+            ]}
           />
         </motion.div>
       </div>

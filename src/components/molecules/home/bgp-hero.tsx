@@ -1,11 +1,17 @@
 import Button from "@/components/atoms/button";
+import * as motion from "motion/react-client";
 import Link from "next/link";
 
 function BGPHero() {
   return (
     <section className="bg-[url('/assets/bigemip-hero-image.jpg')] bg-cover w-full flex flex-col items-center h-[60%]">
       <div className="flex flex-col gap-48 md:items-center  w-full h-full bg-black/70 pt-64 lg:pt-72 pb-48">
-        <div className="flex flex-col md:items-center gap-14 w-full lg:w-1/2 px-5">
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col md:items-center gap-14 w-full lg:w-1/2 px-5"
+        >
           <h1 className="text-[52px] font-medium text-white md:text-center leading-[1.2]">
             <span className="text-amber-500 font-bold block lg:inline">
               BIGEMIP SARL
@@ -27,7 +33,7 @@ function BGPHero() {
               <Button buttonText="Decouvrez nos Projets" />
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

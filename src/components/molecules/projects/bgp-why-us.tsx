@@ -20,6 +20,16 @@ export default function BGPPourquoiBigemip() {
         >
           Pourquoi BIGEMIP SARL?
         </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-md md:text-2xl font-medium text-black text-center"
+        >
+          Depuis sa création, BIGEMIP Sarl a su marquer son empreinte :
+        </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

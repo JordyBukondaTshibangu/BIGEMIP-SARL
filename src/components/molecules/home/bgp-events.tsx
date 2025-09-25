@@ -1,4 +1,5 @@
 import EventCard from "@/components/atoms/event-block";
+import * as motion from "motion/react-client";
 
 const events: { [key: string]: string }[] = [
   {
@@ -46,7 +47,12 @@ const events: { [key: string]: string }[] = [
 function BGPEvents() {
   return (
     <section className="w-full mx-auto flex flex-col gap-8 px-5 py-32 bg-[#1e2236]">
-      <div className="max-w-7xl w-full mx-auto flex flex-col gap-8 ">
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-7xl w-full mx-auto flex flex-col gap-8 "
+      >
         <h1 className="text-3xl font-bold text-amber-500">Événements</h1>
 
         <div className="grid grids-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-center">
@@ -61,7 +67,7 @@ function BGPEvents() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

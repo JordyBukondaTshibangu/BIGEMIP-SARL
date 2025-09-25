@@ -25,12 +25,12 @@ function Footer() {
     {
       icon: <Phone size={30} color="#f99c00" />,
       title: "Contactez-nous",
-      value: "(+021) 645 863 232",
+      value: "(+243) 818 354 186",
     },
     {
       icon: <Mail size={30} color="#f99c00" />,
       title: "Envoyez-nous un email",
-      value: "support@bigemip.com",
+      value: "contact@bigemip.com",
     },
     {
       icon: <MapPin size={30} color="#f99c00" />,

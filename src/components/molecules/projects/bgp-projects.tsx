@@ -16,6 +16,10 @@ export default function BGPServices() {
         >
           Nos Services
         </motion.h1>
+        <p className="text-white text-lg font-normal -my-4">
+          Faites le choix d’un accompagnement expert, à votre image. Chez
+          BIGEMIP, nous proposons des solutions adaptées à chaque besoin :
+        </p>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1 }}
