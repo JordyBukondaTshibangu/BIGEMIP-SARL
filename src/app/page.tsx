@@ -1,4 +1,4 @@
-import BGPPartenairs from "@/components/molecules/_common/bgp-partenairs";
+import BGPPartners from "@/components/molecules/_common/bgp-partenairs";
 import BGPGetInTouch from "@/components/molecules/_common/get-in-touch";
 import BGPActualities from "@/components/molecules/home/bgp-actualities";
 import BGPDescription from "@/components/molecules/home/bgp-description";
@@ -16,7 +16,7 @@ export default function Home() {
       <BGPActualities />
       <BGPSites />
       <BGPProjectsShowCases />
-      <BGPPartenairs />
+      <BGPPartners />
       <BGPGetInTouch />
     </div>
   );
