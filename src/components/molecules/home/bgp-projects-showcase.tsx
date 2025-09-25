@@ -3,7 +3,7 @@ import * as motion from "motion/react-client";
 
 function BGPProjectsShowCases() {
   return (
-    <section className="max-w-7xl w-full mx-auto flex flex-col gap-14  py-20">
+    <section className="max-w-7xl w-full mx-auto flex flex-col gap-14 px-5 py-20">
       <motion.h1
         initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
