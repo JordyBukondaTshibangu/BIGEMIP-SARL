@@ -93,6 +93,14 @@ function NavigationBar() {
               {label}
             </Link>
           ))}
+          <Link
+            key="/contact"
+            href="/contact"
+            className="text-[#f0a500] text-lg hover:text-white transition"
+            onClick={() => setIsOpen(false)}
+          >
+            <Button buttonText="Contactez-nous" type="button" />
+          </Link>
         </div>
       )}
     </>

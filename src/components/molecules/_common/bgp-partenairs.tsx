@@ -35,7 +35,7 @@ function BGPPartners() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex h-full md:grid md:grid-cols-3 gap-10 overflow-auto flex-nowrap"
+          className="flex h-full  flex-col md:grid md:grid-cols-3 gap-14 md:gap-10 overflow-auto flex-nowrap"
         >
           {partners.map((partner, index) => (
             <div
@@ -52,6 +52,7 @@ function BGPPartners() {
               <h4 className="text-2xl font-semibold uppercase text-[#1e2236] tracking-widest">
                 {partner?.name}
               </h4>
+              <hr className="w-20 border-t-2 border-amber-500 md:hidden" />
             </div>
           ))}
         </motion.div>
