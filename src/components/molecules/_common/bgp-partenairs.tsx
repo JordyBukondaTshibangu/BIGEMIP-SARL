@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 
-const partenairs = [
+const partners = [
   {
     image: "/assets/partenaires/geosigmoid-group.png",
     name: "Geosigmoid Group",
@@ -18,7 +18,7 @@ const partenairs = [
     alt: "Gamac Energy",
   },
 ];
-function BGPPartenairs() {
+function BGPPartners() {
   return (
     <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20">
       <div className="max-w-7xl w-full mx-auto flex flex-col gap-20">
@@ -37,20 +37,20 @@ function BGPPartenairs() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex h-full md:grid md:grid-cols-3 gap-10 overflow-auto flex-nowrap"
         >
-          {partenairs.map((partenair, index) => (
+          {partners.map((partner, index) => (
             <div
               key={index}
               className="flex flex-col justify-center items-center gap-20"
             >
               <Image
-                src={partenair?.image}
-                alt={partenair?.alt}
+                src={partner?.image}
+                alt={partner?.alt}
                 className="w-full h-full object-contain"
                 width={500}
                 height={500}
               />
               <h4 className="text-2xl font-semibold uppercase text-[#1e2236] tracking-widest">
-                {partenair?.name}
+                {partner?.name}
               </h4>
             </div>
           ))}
@@ -60,4 +60,4 @@ function BGPPartenairs() {
   );
 }
 
-export default BGPPartenairs;
+export default BGPPartners;
