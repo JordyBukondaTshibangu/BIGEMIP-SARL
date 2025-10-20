@@ -1,24 +1,23 @@
-import { Banknote, FileText, Wallet } from "lucide-react";
+import { FileText, Handshake, Wallpaper } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export const useServices = () => {
+  const t = useTranslations("Services");
   return [
     {
-      icon: <Wallet className="text-amber-500" size={46} strokeWidth={1} />,
-      title: "CONSULTING",
-      description:
-        "Acquisition des données géologiques et géophysique, Accompagnement dans toutes les phases de vos projets de recherche géologique, minière",
+      icon: <Handshake className="text-amber-500" size={46} strokeWidth={1} />,
+      title: t("services.list.service_1.title"),
+      description: t("services.list.service_1.description"),
     },
     {
       icon: <FileText className="text-amber-500" size={46} strokeWidth={1} />,
-      title: "BANQUE DES DONNEES",
-      description:
-        "Conception, mise en place et gestion de la banque de données",
+      title: t("services.list.service_2.title"),
+      description: t("services.list.service_2.description"),
     },
     {
-      icon: <Banknote className="text-amber-500" size={46} strokeWidth={1} />,
-      title: "SOLUTIONS LOGICIELLES",
-      description:
-        "Distribution et formation au logiciel geoscan avec le partenaire international geosigmoide",
+      icon: <Wallpaper className="text-amber-500" size={46} strokeWidth={1} />,
+      title: t("services.list.service_3.title"),
+      description: t("services.list.service_3.description"),
     },
   ];
 };

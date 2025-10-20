@@ -16,7 +16,7 @@ const ServiceCard = ({
       <p className="text-sm md:text-md text-gray-600 leading-7 h-28">
         {description}
       </p>
-      <Link href="/services">
+      <Link href="/services/en-savoir-plus">
         <span className="text-sm md:text-md text-amber-500 hover:underline">
           Learn More
         </span>

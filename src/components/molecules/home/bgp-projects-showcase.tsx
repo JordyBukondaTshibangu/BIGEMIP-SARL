@@ -1,7 +1,13 @@
+"use client";
+
 /* eslint-disable react/no-unescaped-entities */
+
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 function BGPProjectsShowCases() {
+  const t = useTranslations("HomePage");
+
   return (
     <section className="max-w-7xl w-full mx-auto flex flex-col gap-14 px-5 py-20">
       <motion.h1
@@ -10,7 +16,7 @@ function BGPProjectsShowCases() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-3xl font-bold text-amber-500"
       >
-        Nos Références et Projets
+        {t("showcase.title")}
       </motion.h1>
 
       <motion.p
@@ -19,19 +25,7 @@ function BGPProjectsShowCases() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-base leading-8"
       >
-        La géophysique est très utilisée comme outil de détection directe de
-        gisements pour l'exploration minière. En effet, le contraste entre les
-        propriétés physiques spécifiques des gisements métallifères et
-        l'encaissant rocheux crée des « anomalies » qui peuvent être détectées à
-        la surface du sol, ou en aéroporté. C'est le cas pour les contrastes de
-        susceptibilité magnétique, pour la densité, la conductivité électrique
-        et pour la radioactivité naturelle (Thorium, Uranium et Potassium).
-        BIGEMIP Sarl met ces anomalies géophysiques en relation avec les
-        formations géologiques dans vos permis miniers et peut offrir les
-        éléments qualitatifs et quantitatifs (si les données sont disponibles)
-        du modèle géologique régional ou local susceptible de contenir une
-        minéralisation utile, avec des concentrations économiquement
-        exploitables
+        {t("showcase.description")}
       </motion.p>
     </section>
   );

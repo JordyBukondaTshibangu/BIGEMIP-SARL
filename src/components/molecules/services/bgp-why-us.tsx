@@ -1,11 +1,14 @@
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 export default function BGPPourquoiBigemip() {
+  const t = useTranslations("Services");
+
   const stats = [
-    { value: "24k+", label: "Années d’expertise demontrées par ses experts" },
-    { value: "10", label: "Etudes réalisées avec succès" },
-    { value: "98%", label: "De clients satisfaits" },
-    { value: "4", label: "Pays couverts par nos services" },
+    { value: "20", label: t("whyUs.stats.stat_1") },
+    { value: "5+", label: t("whyUs.stats.stat_2") },
+    { value: "98%", label: t("whyUs.stats.stat_3") },
+    { value: "20", label: t("whyUs.stats.stat_4") },
   ];
 
   return (
@@ -18,7 +21,7 @@ export default function BGPPourquoiBigemip() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-3xl md:text-5xl font-medium text-black is-style-underlined-heading-blue"
         >
-          Pourquoi BIGEMIP SARL?
+          {t("whyUs.title")}
         </motion.h1>
 
         <motion.p
@@ -28,7 +31,7 @@ export default function BGPPourquoiBigemip() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-md md:text-2xl font-medium text-black text-center"
         >
-          Depuis sa création, BIGEMIP Sarl a su marquer son empreinte :
+          {t("whyUs.description")}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 40 }}

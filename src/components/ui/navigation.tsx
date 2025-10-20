@@ -1,19 +1,41 @@
 "use client";
 
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import Button from "../atoms/button";
+import { useState, useTransition } from "react";
 
-const navLinks = [
-  { href: "/", label: "Accueil" },
-  { href: "/services", label: "Nos Services" },
-  { href: "/about", label: "À Propos de Nous" },
-];
+import Button from "../atoms/button";
 
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const t = useTranslations("Navigation");
+
+  const router = useRouter();
+  const locale = useLocale();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
+
+  const locales = [
+    { code: "en", label: "English" },
+    { code: "fr", label: "Français" },
+  ];
+
+  const navLinks = [
+    { href: "/", label: t("home") },
+    { href: "/services", label: t("services") },
+    { href: "/about", label: t("about") },
+  ];
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const nextLocale = e.target.value;
+
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale });
+    });
+  };
 
   return (
     <>
@@ -47,11 +69,26 @@ function NavigationBar() {
               ))}
             </div>
 
-            {/* Contact Button (Desktop only) */}
-            <div className="hidden xl:flex items-center">
-              <Link href="/contact">
-                <Button buttonText="Contactez-nous" type="button" />
+            <div className="hidden xl:flex gap-4 items-center">
+              <Link
+                href="/contact"
+                className=" w-full  bg-amber-500 hover:bg-amber-600 active:bg-amber-700  cursor-pointer text-white font-medium py-4 px-8 rounded uppercase focus:ring-2 focus:ring-amber-400 focus:outline-none disabled:bg-amber-300 disabled:text-gray-500 disabled:cursor-not-allowed duration-200"
+              >
+                {t("button")}
               </Link>
+
+              <select
+                value={locale}
+                onChange={handleChange}
+                disabled={isPending}
+                className="border-[#f0a500] rounded-md border p-4 text-sm text-amber-500 shadow-sm hover:shadow-md transition"
+              >
+                {locales.map((lang) => (
+                  <option key={lang.code} value={lang.code}>
+                    {lang.label}
+                  </option>
+                ))}
+              </select>
             </div>
 
             {/* Mobile Menu Toggle */}

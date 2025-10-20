@@ -1,5 +1,8 @@
+"use client";
+
 import { BriefcaseBusiness, Map, Phone } from "lucide-react";
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 type ContactInfoBlockProps = {
   icon: React.ElementType;
@@ -24,9 +27,15 @@ const ContactInfo = ({ title, details, icon: Icon }: ContactInfoBlockProps) => (
 );
 
 function BGPMap() {
+  const t = useTranslations("ContactUs");
+
+  const detailOne = t("info.info_1.details") as string;
+  const detailTwo = t("info.info_2.details") as string;
+  const detailThree = t("info.info_3.details") as string;
+
   return (
     <section className="relative bg-[url('/assets/bigemip-image-3.jpg')] bg-cover w-full flex flex-col items-center md:min-h-[95%]">
-      <div className="flex flex-col gap-48 md:items-center  w-full h-full bg-black/70 py-48 md:py-72">
+      <div className="flex flex-col gap-48 md:items-center w-full h-full bg-black/70 py-48 md:py-72">
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -35,25 +44,24 @@ function BGPMap() {
         >
           <ContactInfo
             icon={Map}
-            title="Retrouvez-nous"
-            details={["9, Avenue du Port, GOMBE, KINSHASA, RDC"]}
+            title={t("info.info_1.title")}
+            details={[detailOne]}
           />
+
           <ContactInfo
             icon={Phone}
-            title="Contactez-nous"
+            title={t("info.info_2.title")}
             details={[
               "Renelle Tshibangu Tshela",
               "+243 812 071 429",
-              "Lundi au Vendredi, 8:00 - 17:00",
+              detailTwo,
             ]}
           />
+
           <ContactInfo
             icon={BriefcaseBusiness}
-            title="Informations legales"
-            details={[
-              "David Mutumbo",
-              "Fiscal ID: RCCM CD/KNG/ RCCM/23-B-02483 et IDNAT : 01-B0500-N40997H",
-            ]}
+            title={t("info.info_3.title")}
+            details={["David Mutumbo", detailThree]}
           />
         </motion.div>
       </div>

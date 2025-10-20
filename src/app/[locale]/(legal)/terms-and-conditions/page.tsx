@@ -1,92 +1,65 @@
 import * as motion from "motion/react-client";
 
 import HeaderTitle from "@/components/molecules/_common/header-title";
+import { useTranslations } from "next-intl";
 
 function AboutUs() {
+  const t = useTranslations("TermsAndCondition");
+
   return (
     <div className="w-full min-h-screen flex flex-col">
-      <HeaderTitle
-        title="Termes et Conditions"
-        subtitle="Les présentes Conditions Générales d’Utilisation et de Vente (ci-après les « Conditions ») définissent les droits et obligations applicables à toute utilisation des services et produits proposés par Bigemip.
-En accédant à notre site internet, à nos plateformes ou en utilisant nos services, vous acceptez sans réserve ces Conditions."
-      />
+      <HeaderTitle title={t("title")} subtitle={t("subtitle")} />
       <motion.section className="w-full mx-auto flex flex-col gap-20 px-5 py-20">
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
-          <h3 className="text-[#1e2236] text-3xl font-bold">1. Objet</h3>
+          <h3 className="text-[#1e2236] text-3xl font-bold">
+            {t("content.content_1.title")}
+          </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Les présentes Conditions ont pour objet de régir :
+            {t("content.content_1.description")}
           </p>
           <div className="flex flex-col gap-5">
             <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
               <li className="text-[#1e2236] leading-9">
-                L’accès et l’utilisation de notre site et de nos services
+                {t("content.content_1.list.item_1")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Les modalités de souscription, d’achat et d’utilisation des
-                prestations fournies par Bigemip
+                {t("content.content_1.list.item_2")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Les droits et obligations réciproques entre Bigemip et ses
-                utilisateurs/clients
+                {t("content.content_1.list.item_3")}
               </li>
             </motion.ul>
           </div>
         </div>
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            2. Acceptation des Conditions
+            {t("content.content_2.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Toute utilisation de nos services implique l’acceptation pleine et
-            entière des présentes Conditions. Si vous n’acceptez pas ces
-            Conditions, vous ne pouvez pas utiliser nos services.
+            {t("content.content_2.description")}
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            3. Services proposés
+            {t("content.content_3.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Bigemip met à disposition des utilisateurs :
+            {t("content.content_3.description")}
           </p>
           <div className="flex flex-col gap-5">
             <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
               <li className="text-[#1e2236] leading-9">
-                Des prestations de conseil, d’analyse et d’accompagnement
+                {t("content.content_3.list.item_1")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Des solutions numériques et technologiques
+                {t("content.content_3.list.item_2")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Des services de formation, de communication et de support
+                {t("content.content_3.list.item_3")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                D’autres services complémentaires précisés sur notre site ou
-                lors de la signature d’un contrat
-              </li>
-            </motion.ul>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
-          <h3 className="text-[#1e2236] text-3xl font-bold">
-            4. Accès aux services
-          </h3>
-          <p className="text-[#1e2236] text-base font-normal leading-8">
-            L’accès à nos services peut nécessiter :
-          </p>
-          <div className="flex flex-col gap-5">
-            <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
-              <li className="text-[#1e2236] leading-9">
-                Une inscription préalable ou la création d’un compte utilisateur
-              </li>
-              <li className="text-[#1e2236] leading-9">
-                La fourniture d’informations exactes et à jour
-              </li>
-              <li className="text-[#1e2236] leading-9">
-                Le respect des obligations techniques (connexion internet,
-                logiciels requis, etc.)
+                {t("content.content_3.list.item_4")}
               </li>
             </motion.ul>
           </div>
@@ -94,22 +67,21 @@ En accédant à notre site internet, à nos plateformes ou en utilisant nos serv
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            5. Commandes et contrats
+            {t("content.content_4.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Toute commande ou souscription à nos services :
+            {t("content.content_4.description")}
           </p>
           <div className="flex flex-col gap-5">
             <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
               <li className="text-[#1e2236] leading-9">
-                Doit être validée par écrit (email, devis signé ou contrat)
+                {t("content.content_4.list.item_1")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                N’est considérée comme définitive qu’après confirmation par
-                Bigemip
+                {t("content.content_4.list.item_2")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Implique l’acceptation sans réserve des présentes Conditions
+                {t("content.content_4.list.item_3")}
               </li>
             </motion.ul>
           </div>
@@ -117,47 +89,21 @@ En accédant à notre site internet, à nos plateformes ou en utilisant nos serv
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            6. Tarifs et paiement
-          </h3>
-
-          <div className="flex flex-col gap-5">
-            <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
-              <li className="text-[#1e2236] leading-9">
-                Les prix de nos services sont indiqués en [devise à préciser,
-                ex. FCFA / EUR / USD], hors taxes et frais supplémentaires
-                éventuels.
-              </li>
-              <li className="text-[#1e2236] leading-9">
-                Les paiements doivent être effectués selon les modalités
-                convenues (virement bancaire, carte, espèces, etc.).
-              </li>
-              <li className="text-[#1e2236] leading-9">
-                En cas de retard de paiement, Bigemip se réserve le droit de
-                suspendre l’accès aux services.
-              </li>
-            </motion.ul>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
-          <h3 className="text-[#1e2236] text-3xl font-bold">
-            7. Responsabilités de l’utilisateur
+            {t("content.content_5.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            L’utilisateur s’engage à :
+            {t("content.content_5.description")}
           </p>
           <div className="flex flex-col gap-5">
             <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
               <li className="text-[#1e2236] leading-9">
-                Fournir des informations exactes et actualisées
+                {t("content.content_5.list.item_1")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Utiliser les services de manière conforme aux lois et règlements
-                en vigueur
+                {t("content.content_5.list.item_2")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Ne pas porter atteinte à la sécurité, à l’intégrité ou au bon
-                fonctionnement des plateformes de Bigemip
+                {t("content.content_5.list.item_3")}
               </li>
             </motion.ul>
           </div>
@@ -165,23 +111,41 @@ En accédant à notre site internet, à nos plateformes ou en utilisant nos serv
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            8. Responsabilités de Bigemip
+            {t("content.content_6.title")}
+          </h3>
+
+          <div className="flex flex-col gap-5">
+            <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
+              <li className="text-[#1e2236] leading-9">
+                {t("content.content_6.list.item_1")}
+              </li>
+              <li className="text-[#1e2236] leading-9">
+                {t("content.content_6.list.item_2")}
+              </li>
+              <li className="text-[#1e2236] leading-9">
+                {t("content.content_6.list.item_3")}
+              </li>
+            </motion.ul>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+          <h3 className="text-[#1e2236] text-3xl font-bold">
+            {t("content.content_7.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Bigemip s’engage à :
+            {t("content.content_7.description")}
           </p>
           <div className="flex flex-col gap-5">
             <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
               <li className="text-[#1e2236] leading-9">
-                Fournir les services avec diligence et professionnalisme
+                {t("content.content_7.list.item_1")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Mettre en place des moyens techniques raisonnables pour assurer
-                la sécurité des données et des accès
+                {t("content.content_7.list.item_2")}
               </li>
               <li className="text-[#1e2236] leading-9">
-                Respecter les obligations légales et contractuelles liées à ses
-                prestations
+                {t("content.content_7.list.item_3")}
               </li>
             </motion.ul>
           </div>
@@ -189,85 +153,94 @@ En accédant à notre site internet, à nos plateformes ou en utilisant nos serv
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            9. Propriété intellectuelle
+            {t("content.content_8.title")}
+          </h3>
+          <p className="text-[#1e2236] text-base font-normal leading-8">
+            {t("content.content_8.description")}
+          </p>
+          <div className="flex flex-col gap-5">
+            <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
+              <li className="text-[#1e2236] leading-9">
+                {t("content.content_8.list.item_1")}
+              </li>
+              <li className="text-[#1e2236] leading-9">
+                {t("content.content_8.list.item_2")}
+              </li>
+              <li className="text-[#1e2236] leading-9">
+                {t("content.content_8.list.item_3")}
+              </li>
+            </motion.ul>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+          <h3 className="text-[#1e2236] text-3xl font-bold">
+            {t("content.content_9.title")}
           </h3>
 
           <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
             <li className="text-[#1e2236] leading-9">
-              Tous les contenus (textes, images, logos, logiciels, documents,
-              etc.) diffusés par Bigemip sont protégés par les lois relatives à
-              la propriété intellectuelle.
+              {t("content.content_9.list.item_1")}
             </li>
             <li className="text-[#1e2236] leading-9">
-              Toute reproduction, diffusion ou exploitation sans autorisation
-              écrite est strictement interdite.
+              {t("content.content_9.list.item_2")}
             </li>
           </motion.ul>
         </div>
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            10. Données personnelles
+            {t("content.content_10.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Le traitement des données personnelles est régi par notre Politique
-            de Confidentialité, consultable sur notre site.
+            {t("content.content_10.description")}
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
-          <h3 className="text-[#1e2236] text-3xl font-bold">11. Résiliation</h3>
+          <h3 className="text-[#1e2236] text-3xl font-bold">
+            {t("content.content_11.title")}
+          </h3>
 
           <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
             <li className="text-[#1e2236] leading-9">
-              Chaque partie peut résilier le contrat en cas de manquement grave
-              par l’autre partie, après mise en demeure restée sans effet.
+              {t("content.content_11.list.item_1")}
             </li>
             <li className="text-[#1e2236] leading-9">
-              Bigemip peut suspendre ou supprimer un compte utilisateur en cas
-              d’usage frauduleux, abusif ou non conforme aux présentes
-              Conditions.
+              {t("content.content_11.list.item_2")}
             </li>
           </motion.ul>
         </div>
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            12. Limitation de responsabilité
+            {t("content.content_12.title")}
           </h3>
 
           <motion.ul className="text-[#1e2236] text-base font-normal leading-8 list-disc flex flex-col gap-2 px-10">
             <li className="text-[#1e2236] leading-9">
-              Bigemip ne pourra être tenu responsable des dommages indirects,
-              pertes de données, pertes financières ou préjudices immatériels
-              subis par l’utilisateur.
+              {t("content.content_12.list.item_1")}
             </li>
             <li className="text-[#1e2236] leading-9">
-              La responsabilité de Bigemip, si elle venait à être engagée, sera
-              limitée au montant payé par le client pour le service concerné.
+              {t("content.content_12.list.item_2")}
             </li>
           </motion.ul>
         </div>
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            13. Force majeure
+            {t("content.content_13.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Bigemip ne saurait être tenu responsable en cas d’événement de force
-            majeure (catastrophe naturelle, panne généralisée, conflit social,
-            guerre, décision administrative, etc.) rendant impossible
-            l’exécution des services.
+            {t("content.content_13.description")}
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
-            14. Modification des Conditions
+            {t("content.content_14.title")}
           </h3>
           <p className="text-[#1e2236] text-base font-normal leading-8">
-            Bigemip se réserve le droit de modifier les présentes Conditions à
-            tout moment. La version applicable est celle publiée sur notre site
-            au moment de l’utilisation des services.
+            {t("content.content_14.description")}
           </p>
         </div>
       </motion.section>

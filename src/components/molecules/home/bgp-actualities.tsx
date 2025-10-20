@@ -1,7 +1,13 @@
+"use client";
+
 import * as motion from "motion/react-client";
 import Image from "next/image";
 
+import { useTranslations } from "next-intl";
+
 function BGPActualities() {
+  const t = useTranslations("HomePage");
+
   return (
     <section className="max-w-7xl w-full mx-auto flex flex-col gap-8 px-5 py-20">
       <motion.h1
@@ -10,7 +16,7 @@ function BGPActualities() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-3xl font-bold text-amber-500"
       >
-        Actualités
+        {t("actuality.title")}
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 40 }}
@@ -18,16 +24,7 @@ function BGPActualities() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-base leading-8"
       >
-        Sur la base de cartes géologiques de la RD Congo, vos permis miniers
-        sont placés dans leur contexte géologique global et régional. Ainsi, une
-        description des formations géologiques, structurales et géologiques en
-        relation avec les indices miniers connus des services géologiques et
-        dans la littérature est présentée dans le but d&apos;orienter vos
-        explorations. En effet, les cartes géologiques fournissent de nombreuses
-        informations importantes sur les couches géologiques qui affleurent,
-        telles que leurs lithologies, leurs âges (stratigraphie), leurs
-        positions structurales (tectonique) et la localisation des mines
-        ancienne et en activité, ainsi que les indices miniers potentiels.
+        {t("actuality.description")}
       </motion.p>
 
       <motion.div

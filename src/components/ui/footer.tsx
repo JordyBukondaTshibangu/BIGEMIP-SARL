@@ -1,13 +1,7 @@
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-  Youtube,
-} from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import Link from "next/link";
+
+import { useTranslations } from "next-intl";
 
 import Button from "@/atoms/button";
 import ContactInfoBlock from "@/atoms/contact-info-block";
@@ -16,41 +10,42 @@ import SocialIconLink from "@/atoms/social-icon-link";
 const socialLinks = [
   { icon: <Facebook size={20} color="#fff" />, href: "#" },
   { icon: <Twitter size={20} color="#fff" />, href: "#" },
-  { icon: <Instagram size={20} color="#fff" />, href: "#" },
-  { icon: <Youtube size={20} color="#fff" />, href: "#" },
+  { icon: <Linkedin size={20} color="#fff" />, href: "#" },
 ];
 
 function Footer() {
+  const t = useTranslations("Footer");
+
   const contactBlocks = [
     {
       icon: <Phone size={30} color="#f99c00" />,
-      title: "Contactez-nous",
-      value: "(+243) 818 354 186",
+      title: t("contact_us"),
+      value: "(+243) 818 354 186  -  (+243) 812 071 429",
     },
     {
       icon: <Mail size={30} color="#f99c00" />,
-      title: "Envoyez-nous un email",
+      title: t("send_us_a_message"),
       value: "contact@bigemip.com",
     },
     {
       icon: <MapPin size={30} color="#f99c00" />,
-      title: "Notre Adresse",
+      title: t("address"),
       value: "9, Avenue du Port, GOMBE, KINSHASA, RDC",
     },
   ];
 
   const quickLinks = [
-    { label: "A Propos de Nous", href: "/about" },
-    { label: "Nos Projets", href: "/services" },
-    { label: "Nos Services", href: "/services" },
-    { label: "Contactez-nous", href: "/contact" },
+    { label: t("quick_links.about"), href: "/about" },
+    { label: t("quick_links.services"), href: "/services" },
+    { label: t("quick_links.projects"), href: "/services" },
+    { label: t("quick_links.careers"), href: "/contact" },
   ];
 
   const legalLinks = [
-    { label: "Politique de Confidentialite", href: "/privacy-policy" },
-    { label: "Termes et Conditions", href: "/terms-and-conditions" },
-    { label: "Support", href: "/support" },
-    { label: "FAQ", href: "/faq" },
+    { label: t("legalLinks.privacy"), href: "/privacy-policy" },
+    { label: t("legalLinks.TandCs"), href: "/terms-and-conditions" },
+    { label: t("legalLinks.support"), href: "/support" },
+    { label: t("legalLinks.faq"), href: "/faq" },
   ];
 
   return (
@@ -64,11 +59,8 @@ function Footer() {
 
         <div className="flex justify-between flex-wrap gap-12 border-t border-[#343940] pt-8">
           <div className="w-full lg:max-w-md flex flex-col gap-4">
-            <h3 className="text-3xl font-medium text-white">BIGEMIP SARL</h3>
-            <p className="text-white leading-7">
-              BIGEMIP, vous accompagne dans exploration minière optimale et
-              ciblée, aidée par les technologies les plus avancées.
-            </p>
+            <h3 className="text-3xl font-medium text-white">{t("title")}</h3>
+            <p className="text-white leading-7">{t("description")}</p>
             <div className="flex gap-4">
               {socialLinks.map((link, i) => (
                 <SocialIconLink key={i} {...link} />
@@ -77,7 +69,9 @@ function Footer() {
           </div>
 
           <div className="w-full lg:w-1/4">
-            <h3 className="font-medium text-amber-500">Liens Rapides</h3>
+            <h3 className="font-medium text-amber-500">
+              {t("quick_links.title")}
+            </h3>
             <ul className="flex flex-col gap-2 list-disc px-5 py-4">
               {quickLinks.map(({ label, href }) => (
                 <li key={label} className="text-white hover:text-amber-500">
@@ -88,7 +82,9 @@ function Footer() {
           </div>
 
           <div className="w-full lg:w-1/4">
-            <h3 className="font-medium text-amber-500">Liens legaux</h3>
+            <h3 className="font-medium text-amber-500">
+              {t("legalLinks.title")}
+            </h3>
             <ul className="flex flex-col gap-2 list-disc px-5 py-4">
               {legalLinks.map(({ label, href }) => (
                 <li key={href} className="text-white hover:text-amber-500">
@@ -99,11 +95,10 @@ function Footer() {
           </div>
 
           <div className="w-full md:max-w-1/2 lg:max-w-md flex flex-col gap-4">
-            <h3 className="font-medium text-amber-500">Newsletter</h3>
-            <p className="text-white leading-7">
-              Restez informé de nos dernières actualités et offres. Abonnez-vous
-              dès maintenant à notre newsletter !
-            </p>
+            <h3 className="font-medium text-amber-500">
+              {t("newsletter.title")}
+            </h3>
+            <p className="text-white leading-7">{t("newsletter.title")}</p>
             <Button buttonText="S'abonner" />
           </div>
         </div>

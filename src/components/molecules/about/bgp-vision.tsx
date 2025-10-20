@@ -1,6 +1,11 @@
+"use client";
+
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 export default function BGPVision() {
+  const t = useTranslations("AboutUs");
+
   return (
     <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 pb-56 bg-[#1e2236]">
       <div className="max-w-7xl mx-auto w-full flex flex-col = gap-14">
@@ -11,7 +16,7 @@ export default function BGPVision() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-5xl font-medium text-amber-500 leading-18 is-style-underlined-heading"
           >
-            Pourquoi Choisir BIGEMIP
+            {t("vision.title")}
           </motion.h1>
         </div>
 
@@ -24,32 +29,28 @@ export default function BGPVision() {
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">1</span>
             <span className="text-lg font-medium text-white">
-              Collaboration avec des sociétés de services américaines,
-              françaises, tunisiennes et émiraties.
+              {t("vision.list.vision_1")}
             </span>
           </div>
 
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">2</span>
             <span className="text-lg font-medium text-white">
-              Proposition de solutions technologiques adaptées aux enjeux des
-              secteurs miniers et pétroliers.
+              {t("vision.list.vision_2")}
             </span>
           </div>
 
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">3</span>
             <span className="text-lg font-medium text-white">
-              Accompagnement dans l’exploration minière et pétrolière de manière
-              optimale et ciblée.
+              {t("vision.list.vision_3")}
             </span>
           </div>
 
           <div className="flex gap-6">
             <span className="text-6xl font-semibold text-white">4</span>
             <span className="text-lg font-medium text-white">
-              Utilisation des technologies les plus avancées pour maximiser les
-              résultats.
+              {t("vision.list.vision_4")}
             </span>
           </div>
         </motion.div>

@@ -1,7 +1,12 @@
+"use client";
+
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 function BGPWhoAreWe() {
+  const t = useTranslations("AboutUs");
+
   return (
     <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
       <motion.div
@@ -11,23 +16,16 @@ function BGPWhoAreWe() {
         className="max-w-7xl mx-auto w-full flex flex-col gap-10"
       >
         <h1 className="text-5xl font-medium text-amber-500 is-style-underlined-heading">
-          A Propos de Nous
+          {t("who_are_we.title")}
         </h1>
         <div className="flex flex-col md:flex-row gap-14">
           <div className="flex flex-col gap-6 w-full lg:w-3/4">
             <div className="flex flex-col gap-4">
               <p className="text-white text-lg font-normal leading-8">
-                La société BIGEMIP est un bureau qui offre ses services
-                d&apos;ingénieur conseil à ses clients parmi lesquels les
-                investisseurs, les opérateurs miniers et pétroliers, et les
-                exploitants miniers pour leur apporter les solutions les plus
-                adaptées dans les secteurs de la géologie, de mines et du
-                Pétrole.
+                {t("who_are_we.description_1")}
               </p>
               <p className="text-white text-lg font-normal leading-8">
-                Notre Bureau accompagne également les investisseurs en leur
-                assistant techniquement selon leur besoin dans les secteurs
-                ci-haut mentionnés.
+                {t("who_are_we.description_2")}
               </p>
             </div>
           </div>

@@ -1,0 +1,581 @@
+{
+  "Navigation": {
+    "home": "Acceuil",
+    "services": "Nos Services",
+    "about": "A Propos de Nous",
+    "button": "Contactez-nous"
+  },
+  "Footer": {
+    "title": "BIGEMIP SARL",
+    "description": "BIGEMIP, vous accompagne dans exploration minière optimale et ciblée, aidée par les technologies les plus avancées",
+    "contact_us": "Contactez-nous",
+    "send_us_a_message": "Laissez-nous un message",
+    "address": "Notre adresse",
+    "quick_links": {
+      "title": "Liens Rapides",
+      "about": "A Propos",
+      "services": "Services",
+      "projects": "Projets",
+      "price": "Tarifs",
+      "careers": "Contact"
+    },
+    "legalLinks": {
+      "title": "Liens legaux",
+      "TandCs": "Termes et Conditions",
+      "privacy": "Politique de Confidentialite",
+      "support": "Support",
+      "refund": "Politique de Remboursement",
+      "disclaimer": "Avertissements",
+      "faq": "FAQ"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Restez informé de nos dernières actualités et offres. Abonnez-vous dès maintenant à notre newsletter !",
+      "button": "S'abonner"
+    },
+    "copyright": "BIGEMIP SARL © 2023. Tous droits r&eacute;serv&eacute;s."
+  },
+  "HomePage": {
+    "hero": {
+      "title": "BIGEMIP SARL",
+      "title_description_1": "Bureau d'Investigations Géologique, Minière et Pétrolière SARL.",
+      "description": "BIGEMIPvous accompagne dans l'exploration minière optimale et ciblée, aidée par les technologies les plus avancées.",
+      "button": "Decouvrez nos Projets"
+    },
+    "welcome_to_bigemip": {
+      "title": "Bienvenue sur BIGEMIP",
+      "subtitle": "A Propos de Nous",
+      "second_subtitle": "Un appercu de BIGEMIP SARL",
+      "description_1": "Le Bureau d'Investigations Géologique, Minière et Pétrolière,",
+      "description_2": "vous accompagne dans l'exploration minière optimale et ciblée, aidée par les technologies les plus avancées.",
+      "description_3": "BIGEMIP SARL, offre un paquet de services en ingénierie conseil à des clients aux profils variés, parmi lesquels se trouvent :",
+      "metrics": {
+        "metric_1": "Nous évaluons ensemble vos permis de recherche : de la première cartographie géologique en passant par les études géophysiques, géochimiques et la télédétection, jusqu'à l'estimation financière de votre projet minier",
+        "metric_2": " Nous vous accompagnons dans toutes les étapes de vos projets de recherche géologique, minière.",
+        "metric_3": "Nous proposons les études listées ci-dessus, de manière spécifique ou globale selon vos besoins."
+      }
+    },
+    "events": {
+      "title": "Événements",
+      "event_1": {
+        "title": "Webinaires base de données et analyses des sols urbains",
+        "subtitle": "Webinaire",
+        "description": "Découvrez les meilleures pratiques pour collecter, organiser et analyser des données urbaines afin de mieux comprendre les sols en milieu urbain.",
+        "date": "2025-09-15T10:00:00Z",
+        "displayDate": "15 Septembre 2025, 10h00"
+      },
+      "event_2": {
+        "title": "Atelier sur la cartographie numérique",
+        "subtitle": "Atelier",
+        "description": "Un atelier interactif pour apprendre à utiliser des outils de cartographie numérique dans le cadre de projets environnementaux.",
+        "date": "2025-09-20T14:00:00Z",
+        "displayDate": "20 Septembre 2025, 14h00"
+      },
+      "event_3": {
+        "title": "Conférence internationale sur l’innovation durable",
+        "subtitle": "Conférence",
+        "description": "Un événement rassemblant des experts et chercheurs autour des innovations pour un avenir durable.",
+        "date": "2025-10-05T09:00:00Z",
+        "displayDate": "5 Octobre 2025, 09h00"
+      },
+      "event_4": {
+        "title": "Session Q&A avec nos experts",
+        "subtitle": "Session Live",
+        "description": "Posez vos questions à nos spécialistes sur les enjeux urbains et environnementaux.",
+        "date": "2025-10-12T17:00:00Z",
+        "displayDate": "12 Octobre 2025, 17h00"
+      }
+    },
+    "actuality": {
+      "title": "Actualités",
+      "description": "Sur la base de cartes géologiques de la RD Congo, vos permis miniers sont placés dans leur contexte géologique global et régional. Ainsi, une description des formations géologiques, structurales et géologiques en relation avec les indices miniers connus des services géologiques et dans la littérature est présentée dans le but d'orienter vos explorations. En effet, les cartes géologiques fournissent de nombreuses informations importantes sur les couches géologiques qui affleurent, telles que leurs lithologies, leurs âges (stratigraphie), leurs positions structurales (tectonique) et la localisation des mines ancienne et en activité, ainsi que les indices miniers potentiels."
+    },
+    "sites": {
+      "title": "Nos Sites",
+      "description_1": "La société BIGEMIP est un bureau qui offre ses services d'ingénieur conseil à ses clients parmi lesquels les investisseurs, les opérateurs miniers et pétroliers, et les exploitants miniers pour leur apporter les solutions les plus adaptées dans les secteurs de la géologie, de mines et du Pétrole.",
+      "description_2": "BIGEMIP SARL travaille en collaboration avec des sociétés de services de droit américain, français, tunisien et Emiratie, afin de proposer les solutions techno- logiques les plus adaptées aux problèmes des secteurs miniers et pétroliers. BIGEMIP SARL, vous accompagne dans l’exploration minière et pétrolière optimale et ciblée, aidée par les technologies les plus avancées."
+    },
+    "showcase": {
+      "title": "Nos Références et Projets",
+      "description": "La géophysique est très utilisée comme outil de détection directe de gisements pour l'exploration minière. En effet, le contraste entre les propriétés physiques spécifiques des gisements métallifères et l'encaissant rocheux crée des « anomalies » qui peuvent être détectées à la surface du sol, ou en aéroporté. C'est le cas pour les contrastes de susceptibilité magnétique, pour la densité, la conductivité électrique et pour la radioactivité naturelle (Thorium, Uranium et Potassium). BIGEMIP SARL met ces anomalies géophysiques en relation avec les formations géologiques dans vos permis miniers et peut offrir les éléments qualitatifs et quantitatifs (si les données sont disponibles) du modèle géologique régional ou local susceptible de contenir une minéralisation utile, avec des concentrations économiquement exploitables"
+    },
+    "partners": {
+      "title": "Nos Partenaires"
+    }
+  },
+  "GetInTouch": {
+    "title": "Entrez en Contact",
+    "subtitle": "Vous hésitez encore sur nos fonctionnalités ?",
+    "caption": "Demandez une consultation.",
+    "description": "Vous avez des questions ou souhaitez en savoir plus sur nos services ? Contactez-nous dès aujourd’hui pour discuter de vos besoins et obtenir un accompagnement personnalisé.",
+    "button": "Contactez-nous"
+  },
+  "Services": {
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Chaque service vous accompagner efficacement et garantir des résultats concrets.",
+      "description": "Faites le choix d’un accompagnement expert, à votre image. Chez BIGEMIP, nous proposons des solutions adaptées à chaque besoin :",
+      "list": {
+        "service_1": {
+          "title": "CONSULTING",
+          "description": "Acquisition des données géologiques et géophysique, Accompagnement dans toutes les phases de vos projets de recherche géologique, minière"
+        },
+        "service_2": {
+          "title": "BANQUE DES DONNEES",
+          "description": "Évaluation technique et opérationnelle des actifs (capacités, état, mise en service, localisation GPS, photos horodatées)."
+        },
+        "service_3": {
+          "title": "SOLUTIONS LOGICIELLES",
+          "description": "Distribution et formation au logiciel geoscan avec le partenaire international geosigmoide"
+        }
+      }
+    },
+    "whyUs": {
+      "title": "Pourquoi BIGEMIP SARL?",
+      "description": "Depuis sa création, BIGEMIP SARL a su marquer son empreinte :",
+      "stats": {
+        "stat_1": "Années d’expertise demontrées par ses experts",
+        "stat_2": "Domaines d’expertise dans la recherche géologique minière.",
+        "stat_3": "De clients satisfaits",
+        "stat_4": "Experts dédiés au service de la cartographie géologique et minière"
+      }
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "list": {
+        "tool_1": {
+          "title": "INNOVATION",
+          "description": "Toujours à l’affût des nouvelles technologies pour vous offrir des solutions modernes et efficaces dans le métier des investigations géologiques et minières"
+        },
+        "tool_2": {
+          "title": "FLEXIBILITE",
+          "description": "Chaque projet mérite une attention minutieuse et un engagement total pour garantir un résultat à la hauteur de vos attentes."
+        },
+        "tool_3": {
+          "title": "ENGAGEMENT POUR L’AFRIQUE",
+          "description": "En tant qu’entreprise africaine, BIGEMIP SARL s’engage à accompagner la croissance du continent par des solutions innovantes et durables. Notre mission est de contribuer à l’émergence d’une économie forte et compétitive au bénéfice des populations africaines."
+        }
+      }
+    }
+  },
+  "ContactUs": {
+    "title": "Contactez Nous",
+    "description": "La société BIGEMIP SARL est un bureau qui offre ses services d'ingénieur conseil à ses clients parmi lesquels les investisseurs, les opérateurs miniers et pétroliers, et les exploitants miniers pour leur apporter les solutions les plus adaptées dans les secteurs de la géologie, de mines et du Pétrole.",
+    "form": {
+      "description": "Une question, un besoin ? Remplissez le formulaire de contact ci-dessous. Nous reviendrons vers vous dans les plus brefs délais.",
+      "placeholder": {
+        "name": "Votre Nom...",
+        "email": "Votre Email...",
+        "subject": "Sujet...",
+        "text": "Votre Message...",
+        "button": "Envoyer",
+        "button_sending": "Envoi en cours..."
+      },
+      "feedback": {
+        "success": "Message envoyé",
+        "error": "Une erreur est survenue"
+      }
+    },
+    "info": {
+      "info_1": {
+        "title": "Retrouvez-nous",
+        "details": "9, Avenue du Port, GOMBE, KINSHASA, RDC"
+      },
+      "info_2": {
+        "title": "Contactez-nous",
+        "details": "Lundi au Vendredi, 8:00 - 17:00"
+      },
+      "info_3": {
+        "title": "Informations legales",
+        "details": "Fiscal ID: RCCM CD/KNG/ RCCM/23-B-02483 et IDNAT : 01-B0500-N40997H"
+      }
+    }
+  },
+  "AboutUs": {
+    "who_are_we": {
+      "title": "A Propos de Nous",
+      "description_1": "La société BIGEMIPest un bureau qui offre ses services d'ingénieur conseil à ses clients parmi lesquels les investisseurs, les opérateurs miniers et pétroliers, et les exploitants miniers pour leur apporter les solutions les plus adaptées dans les secteurs de la géologie, de mines et du Pétrole.",
+      "description_2": "Notre Bureau accompagne également les investisseurs en leur assistant techniquement selon leur besoin dans les secteurs ci-haut mentionnés."
+    },
+    "team": {
+      "title": "Notre Equipe",
+      "list": {
+        "member_1_role": "Founder & CEO",
+        "member_2_role": "Coordinatrice",
+        "member_3_role": "Coordinateur Technique",
+        "member_4_role": "Géologue d’exploration senior",
+        "member_5_role": "Géologue d’exploration",
+        "member_6_role": "Géologue de projet"
+      }
+    },
+    "plus": {
+      "title": "Qui sommes-nous?",
+      "description": "Le Bureau d’Investigations Géologique, Minière et Pétrolière SARL, BIGEMIP SARL, en sigle, est une société de droit congolais, inscrite sous le RCCM CD/KNG/ RCCM/23-B-02483 et IDNAT : 01-B0500-N40997H ayant son siège social dans la ville province de Kinshasa, en République démocratique du Congo. BIGEMIP SARL, offre un paquet de services en ingénierie conseil à des clients aux profils variés, parmi lesquels se trouvent :",
+      "list": {
+        "item_1": "Les investisseurs dans les secteurs miniers et pétroliers",
+        "item_2": "Les opérateurs miniers et pétroliers,",
+        "item_3": "Les exploitants miniers,",
+        "item_4": "Les institutions étatiques dévouées au secteur minier et pétrolier."
+      }
+    },
+    "vision": {
+      "title": "Pourquoi Choisir BIGEMIP",
+      "list": {
+        "vision_1": "Collaboration avec des sociétés de services américaines, françaises, tunisiennes et émiraties.",
+        "vision_2": "Proposition de solutions technologiques adaptées aux enjeux des secteurs miniers et pétroliers.",
+        "vision_3": "Accompagnement dans l’exploration minière et pétrolière de manière optimale et ciblée.",
+        "vision_4": "Utilisation des technologies les plus avancées pour maximiser les résultats."
+      }
+    }
+  },
+  "Faq": {
+    "title": "FAQ",
+    "subtitle": "Bienvenue sur notre page Foire Aux Questions (FAQ).Vous trouverez ici les réponses aux interrogations les plus fréquentes concernant Bigemip, nos services et nos solutions.",
+    "description": "Notre objectif est de vous accompagner et de vous fournir des informations claires et rapides sur :",
+    "list": {
+      "option_1": "Nos offres et prestations",
+      "option_2": "Les démarches et processus d’inscription ou de souscription",
+      "option_3": "Le support technique et l’assistance client",
+      "option_4": "Les modalités de paiement et de facturation",
+      "option_5": "Toute autre question pratique liée à nos activités"
+    },
+    "detail": "Si vous ne trouvez pas la réponse à votre question, n’hésitez pas à nous contacter directement via notre formulaire de contact ou par email. Notre équipe sera ravie de vous aider."
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "subtitle": "Chez Bigemip, nous accordons une importance primordiale à la protection de vos données personnelles et à votre vie privée. Cette Politique de Confidentialité a pour objectif de vous expliquer de manière claire et transparente",
+    "description_1": "Bienvenue sur notre page Politique de Confidentialité. Chez Bigemip, la protection de vos données personnelles est une priorité.",
+    "list_1": {
+      "option_1": " Les types de données que nous collectons",
+      "option_2": " L’utilisation que nous faisons de vos informations",
+      "option_3": "La durée de conservation de vos données",
+      "option_4": "Les mesures de sécurité mises en place pour les protéger",
+      "option_5": "Vos droits en matière d’accès, de rectification et de suppression de vos données"
+    },
+    "description_2": "Nous nous engageons à traiter vos informations avec la plus grande confidentialité et conformément aux réglementations en vigueur (comme le RGPD). Si vous avez la moindre question ou souhaitez exercer vos droits, vous pouvez nous contacter directement via notre formulaire de contact ou par email.",
+    "main": {
+      "title": "Politique de Confidentialité – Bigemip",
+      "description": "Chez Bigemip, nous accordons une importance primordiale à la protection de vos données personnelles et à votre vie privée. Cette Politique de Confidentialité a pour objectif de vous expliquer de manière claire et transparente :",
+      "list": {
+        "item_1": "Quelles données nous collectons",
+        "item_2": "Comment et pourquoi nous les utilisons",
+        "item_3": "Les mesures mises en place pour les protéger",
+        "item_4": "Les droits dont vous disposez concernant vos informations"
+      },
+      "detail": "En utilisant nos services, vous acceptez les termes décrits ci-dessous.",
+      "content": {
+        "content_1": {
+          "title": "1. Données que nous collectons",
+          "description": "Nous collectons uniquement les données nécessaires à la fourniture et à l’amélioration de nos services :",
+          "list": {
+            "item_1": "Informations personnelles : nom, prénom, adresse email, numéro de téléphone, fonction, entreprise.",
+            "item_2": "Informations techniques : adresse IP, type de navigateur,système d’exploitation, pages consultées, temps de visite.",
+            "item_3": "Données de communication : échanges par email, formulaires remplis, messages envoyés via nos plateformes.",
+            "item_4": "Données contractuelles : informations liées à la facturation, moyens de paiement, historiques de commandes ou de prestations."
+          },
+          "detail": "En utilisant nos services, vous acceptez les termes décrits ci-dessous."
+        },
+        "content_2": {
+          "title": "2. Finalités de l’utilisation des données",
+          "description": "Vos données sont collectées et utilisées uniquement pour les objectifs suivants :",
+          "list": {
+            "item_1": "Fournir et améliorer nos services et solutions",
+            "item_2": "Gérer vos demandes, inscriptions et projets",
+            "item_3": "Personnaliser votre expérience utilisateur",
+            "item_4": "Communiquer avec vous (informations, offres, newsletters, événements)",
+            "item_5": "Assurer le suivi administratif, légal et financier",
+            "item_6": "Prévenir et détecter les fraudes ou activités malveillantes"
+          }
+        },
+        "content_3": {
+          "title": "3. Partage de vos données",
+          "description": "Nous ne vendons ni ne louons vos données à des tiers. Cependant, vos informations peuvent être partagées uniquement dans les cas suivants:",
+          "list": {
+            "item_1": "Partenaires de confiance : lorsque cela est nécessaire pour fournir le service (ex. prestataires techniques, hébergeurs).",
+            "item_2": "Obligations légales : en cas d’exigence des autorités judiciaires ou réglementaires.",
+            "item_3": "Transferts sécurisés : dans le cadre d’outils tiers (par exemple Google Workspace, LinkedIn ou autres logiciels utilisés pour nos activités), uniquement si ces services garantissent un niveau adéquat de protection des données."
+          }
+        },
+        "content_4": {
+          "title": "4. Sécurité et protection",
+          "description": "Nous mettons en place des mesures techniques et organisationnelles pour protéger vos données contre :",
+          "list": {
+            "item_1": "Les accès non autorisés",
+            "item_2": "Les pertes, fuites ou vols",
+            "item_3": "Les altérations ou destructions accidentelles",
+            "item_4": "Hébergement sécurisé",
+            "item_5": "Connexions chiffrées (SSL/HTTPS)",
+            "item_6": "Gestion restreinte des accès en interne",
+            "item_7": "Sauvegardes régulières"
+          }
+        },
+        "content_5": {
+          "title": "5. Conservation des données",
+          "description": "Vos données sont conservées uniquement le temps nécessaire à la réalisation des finalités décrites ci-dessus, puis supprimées ou anonymisées. Certaines informations peuvent être conservées plus longtemps afin de respecter nos obligations légales et fiscales."
+        },
+        "content_6": {
+          "title": "6. Vos droits",
+          "description": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :",
+          "list": {
+            "item_1": "Accès : savoir quelles données nous détenons sur vous",
+            "item_2": "Rectification : corriger vos informations si elles sont inexactes ou incomplètes",
+            "item_3": "Suppression : demander l’effacement de vos données personnelles",
+            "item_4": "Opposition : refuser l’utilisation de vos données à certaines fins (marketing, prospection)",
+            "item_5": "Portabilité : obtenir une copie de vos données dans un format lisible",
+            "item_6": "Limitation : restreindre le traitement de vos données dans certains cas"
+          }
+        },
+        "content_7": {
+          "title": "7. Cookies et technologies similaires",
+          "description": "Notre site peut utiliser des cookies et outils de suivi afin de :",
+          "list": {
+            "item_1": "Faciliter votre navigation",
+            "item_2": "Mesurer l’audience et améliorer l’expérience utilisateur",
+            "item_3": "Personnaliser le contenu et les offres"
+          },
+          "detail": "Vous pouvez configurer votre navigateur pour refuser les cookies ou être informé lors de leur utilisation."
+        },
+        "content_8": {
+          "title": "8. Modifications de cette politique",
+          "description": "Nous pouvons mettre à jour cette Politique de Confidentialité afin de refléter l’évolution de nos pratiques, de nos services ou de la législation. La version la plus récente sera toujours disponible sur cette page."
+        }
+      }
+    }
+  },
+  "Support": {
+    "title": "Support Chez BIGEMIP",
+    "subtitle": "Bienvenue sur la page Support de Bigemip. Notre équipe est à votre disposition pour vous aider à résoudre vos problèmes, répondre à vos questions et vous accompagner dans l’utilisation de nos services.",
+    "content": {
+      "content_1": {
+        "title": "🔎 Trouvez rapidement une réponse",
+        "description": "Avant de contacter notre équipe, nous vous invitons à consulter :",
+        "list": {
+          "item_1": "La FAQ (Foire aux Questions) : vous y trouverez les réponses aux questions les plus fréquentes.",
+          "item_2": "La Politique de Confidentialité : pour comprendre comment nous traitons vos données.",
+          "item_3": "Les Termes et Conditions : pour connaître vos droits et obligations."
+        }
+      },
+      "content_2": {
+        "title": "📩 Contacter le support",
+        "description": "Si vous ne trouvez pas la solution à votre problème, notre équipe reste disponible :",
+        "list": {
+          "item_1": "📧 Email support : support@bigemip.com",
+          "item_2": "📞 Téléphone : (+021) 645 863 232",
+          "item_3": "📍 Adresse : 9, Avenue du Port, GOMBE, KINSHASA, RDC."
+        }
+      },
+      "content_3": {
+        "title": "⏰ Nos horaires d’assistance :",
+        "list": {
+          "item_1": "📅 Lundi au Vendredi de 9h00 à 18h00",
+          "item_2": "📅 Samedi de 9h00 à 14h00",
+          "item_3": "Dimanche & jours fériés : Fermé"
+        }
+      },
+      "content_4": {
+        "title": "🛠️ Types de demandes que nous traitons",
+        "description": "Notre équipe support peut vous accompagner pour :",
+        "list": {
+          "item_1": "Problèmes techniques liés à l’utilisation de nos plateformes et services",
+          "item_2": "Assistance à la configuration ou à l’installation",
+          "item_3": "Questions sur la facturation et les paiements",
+          "item_4": "Demandes d’informations sur nos offres et solutions",
+          "item_5": "Signalement d’un bug, d’un incident ou d’une erreur"
+        }
+      },
+      "content_5": {
+        "list": {
+          "item_1": "Chaque demande est enregistrée et reçoit un numéro de ticket.",
+          "item_2": "Vous pouvez suivre l’évolution de votre demande via email ou téléphone.",
+          "item_3": "Notre objectif : vous fournir une réponse sous 24 à 48h ouvrées."
+        }
+      },
+      "content_6": {
+        "title": "🤝 Engagement qualité",
+        "description": "Chez Bigemip, nous nous engageons à :",
+        "list": {
+          "item_1": "Vous offrir une assistance claire et personnalisée",
+          "item_2": "Vous répondre dans les meilleurs délais",
+          "item_3": "Améliorer nos services grâce à vos retours"
+        }
+      }
+    }
+  },
+  "TermsAndCondition": {
+    "title": "Termes et Conditions",
+    "subtitle": "Les présentes Conditions Générales d’Utilisation et de Vente (ci-après les « Conditions ») définissent les droits et obligations applicables à toute utilisation des services et produits proposés par Bigemip. En accédant à notre site internet, à nos plateformes ou en utilisant nos services, vous acceptez sans réserve ces Conditions.",
+    "content": {
+      "content_1": {
+        "title": "1. Objet",
+        "description": "Les présentes Conditions ont pour objet de régir :",
+        "list": {
+          "item_1": "L’accès et l’utilisation de notre site et de nos services",
+          "item_2": "Les modalités de souscription, d’achat et d’utilisation des prestations fournies par Bigemip",
+          "item_3": "Les droits et obligations réciproques entre BIGEMIPet ses utilisateurs/clients"
+        }
+      },
+      "content_2": {
+        "title": "2. Acceptation des Conditions",
+        "description": "Toute utilisation de nos services implique l’acceptation pleine et entière des présentes Conditions. Si vous n’acceptez pas ces Conditions, vous ne pouvez pas utiliser nos services."
+      },
+      "content_3": {
+        "title": "3. Services proposés",
+        "description": "BIGEMIPmet à disposition des utilisateurs :",
+        "list": {
+          "item_1": "Des prestations de conseil, d’analyse et d’accompagnement",
+          "item_2": "Des solutions numériques et technologiques",
+          "item_3": "Des services de formation, de communication et de support",
+          "item_4": "D’autres services complémentaires précisés sur notre site ou lors de la signature d’un contrat"
+        }
+      },
+      "content_4": {
+        "title": "4. Accès aux services",
+        "description": "L’accès à nos services peut nécessiter :",
+        "list": {
+          "item_1": "Une inscription préalable ou la création d’un compte utilisateur",
+          "item_2": "La fourniture d’informations exactes et à jour",
+          "item_3": "Le respect des obligations techniques (connexion internet, logiciels requis, etc.)"
+        }
+      },
+      "content_5": {
+        "title": "5. Commandes et contrats",
+        "description": "Toute commande ou souscription à nos services :",
+        "list": {
+          "item_1": "Doit être validée par écrit (email, devis signé ou contrat)",
+          "item_2": "N’est considérée comme définitive qu’après confirmation par Bigemip",
+          "item_3": "Implique l’acceptation sans réserve des présentes Conditions"
+        }
+      },
+      "content_6": {
+        "title": "6. Tarifs et paiement",
+        "list": {
+          "item_1": "Les prix de nos services sont indiqués en [devise à préciser, ex. FCFA / EUR / USD], hors taxes et frais supplémentaires éventuels.",
+          "item_2": "Les paiements doivent être effectués selon les modalités convenues (virement bancaire, carte, espèces, etc.).",
+          "item_3": "En cas de retard de paiement, BIGEMIPse réserve le droit de suspendre l’accès aux services."
+        }
+      },
+      "content_7": {
+        "title": "7. Responsabilités de l’utilisateur",
+        "description": "L’utilisateur s’engage à :",
+        "list": {
+          "item_1": "Fournir des informations exactes et actualisées",
+          "item_2": "Utiliser les services de manière conforme aux lois et règlements en vigueur",
+          "item_3": "Ne pas porter atteinte à la sécurité, à l’intégrité ou au bon fonctionnement des plateformes de Bigemip"
+        }
+      },
+      "content_8": {
+        "title": "8. Responsabilités de Bigemip",
+        "description": "BIGEMIPs’engage à :",
+        "list": {
+          "item_1": "Fournir les services avec diligence et professionnalisme",
+          "item_2": "Mettre en place des moyens techniques raisonnables pour assurer la sécurité des données et des accès",
+          "item_3": "Respecter les obligations légales et contractuelles liées à ses prestations"
+        }
+      },
+      "content_9": {
+        "title": "9. Propriété intellectuelle",
+        "list": {
+          "item_1": "Tous les contenus (textes, images, logos, logiciels, documents, etc.) diffusés par BIGEMIPsont protégés par les lois relatives à la propriété intellectuelle.",
+          "item_2": "Toute reproduction, diffusion ou exploitation sans autorisation écrite est strictement interdite."
+        }
+      },
+      "content_10": {
+        "title": "10. Données personnelles",
+        "description": "Le traitement des données personnelles est régi par notre Politique de Confidentialité, consultable sur notre site."
+      },
+      "content_11": {
+        "title": "11. Résiliation",
+        "list": {
+          "item_1": "Chaque partie peut résilier le contrat en cas de manquement grave par l’autre partie, après mise en demeure restée sans effet.",
+          "item_2": "BIGEMIPpeut suspendre ou supprimer un compte utilisateur en cas d’usage frauduleux, abusif ou non conforme aux présentes Conditions."
+        }
+      },
+      "content_12": {
+        "title": "12. Limitation de responsabilité",
+        "list": {
+          "item_1": "BIGEMIPne pourra être tenu responsable des dommages indirects, pertes de données, pertes financières ou préjudices immatériels subis par l’utilisateur.",
+          "item_2": "La responsabilité de Bigemip, si elle venait à être engagée, sera limitée au montant payé par le client pour le service concerné."
+        }
+      },
+      "content_13": {
+        "title": "13. Force majeure",
+        "description": "BIGEMIPne saurait être tenu responsable en cas d’événement de force majeure (catastrophe naturelle, panne généralisée, conflit social, guerre, décision administrative, etc.) rendant impossible l’exécution des services."
+      },
+      "content_14": {
+        "title": "14. Modification des Conditions",
+        "description": "BIGEMIPse réserve le droit de modifier les présentes Conditions à tout moment. La version applicable est celle publiée sur notre site au moment de l’utilisation des services."
+      }
+    }
+  },
+  "More": {
+    "consulting": {
+      "title": "CONSULTING",
+      "description": "Acquisition des données géologiques et géophysiques, accompagnement dans toutes les phases de vos projets industriels, de recherche géologique, minière..."
+    },
+    "database": {
+      "title": "BANQUE DES DONNÉES",
+      "points": [
+        "Évaluation technique et opérationnelle des actifs (capacités, état, mise en service, localisation GPS, photos horodatées).",
+        "Production de rapports analytiques et cartographie numérique interactive pour la planification et la maintenance.",
+        "Formation professionnelle à l’utilisation des logiciels spécialisés (ArcGIS, QGIS, WebGIS sur mesure, bases de données spatiales)."
+      ]
+    },
+    "mapping": {
+      "title": "CARTOGRAPHIE ET SOLUTIONS LOGICIELLES",
+      "points": [
+        "Développement et déploiement d’outils SIG (Systèmes d’Information Géographique) pour la cartographie interactive du réseau.",
+        "Intégration de plateformes de monitoring en temps réel (WebGIS, IoT, capteurs intelligents) pour le suivi des équipements.",
+        "Tableaux de bord décisionnels et rapports automatisés pour les directions techniques et commerciales.",
+        "Hébergement sécurisé des données."
+      ]
+    },
+    "mission": {
+      "title": "NOTRE MISSION",
+      "intro": "Chez Bigemip Sarl, nous avons pour mission d'accompagner nos clients dans la réalisation de projets innovants et à forte valeur ajoutée.",
+      "values": {
+        "innovation": {
+          "title": "INNOVATION",
+          "text": "Toujours à l’affût des nouvelles technologies pour vous offrir des solutions modernes et efficaces dans le métier des investigations géologiques et minières."
+        },
+        "flexibility": {
+          "title": "FLEXIBILITÉ",
+          "text": "Chaque projet mérite une attention minutieuse et un engagement total pour garantir un résultat à la hauteur de vos attentes."
+        },
+        "commitment": {
+          "title": "ENGAGEMENT POUR L’AFRIQUE",
+          "text": "En tant qu’entreprise africaine, BIGEMIP s’engage à accompagner la croissance du continent par des solutions innovantes et durables. Notre mission est de contribuer à l’émergence d’une économie forte et compétitive au bénéfice des populations africaines."
+        }
+      }
+    },
+    "expertise": {
+      "title": "NOTRE EXPERTISE",
+      "baseMap": {
+        "title": "CARTE GÉOLOGIQUE DE BASE",
+        "description": "Forte de son expérience en géologie appliquée et en géo-informatique, BIGEMIP SARL accompagne les opérateurs du secteur minier dans la production et l’actualisation de cartes géologiques fiables, précises et conformes aux standards internationaux.",
+        "points": [
+          "Cartes géologiques régionales et locales, illustrant les formations lithologiques et les unités stratigraphiques.",
+          "Cartes structurales, mettant en évidence les grands traits tectoniques, plis et failles.",
+          "Cartes métallogéniques, présentant la répartition des substances minérales connues et des zones à potentiel."
+        ]
+      },
+      "geoScientific": {
+        "title": "CARTES GÉOSCIENTIFIQUES THÉMATIQUES",
+        "points": [
+          "Cartes d’inventaire des indices et gisements miniers.",
+          "Cartes des zones d’exploration prioritaire.",
+          "Cartes des infrastructures minières et énergétiques, facilitant la planification sectorielle."
+        ]
+      },
+      "mining": {
+        "title": "CARTES MINIÈRES ET D’INVENTAIRE DES RESSOURCES",
+        "points": [
+          "Des cartes hydrogéologiques, identifiant les nappes souterraines et les zones de recharge.",
+          "Des cartes géotechniques, décrivant la nature et la stabilité des terrains pour les ouvrages d’infrastructures.",
+          "Des cartes géophysiques (magnétiques, gravimétriques, radiométriques) pour l’interprétation des structures profondes.",
+          "Des cartes géochimiques régionales, mettant en évidence les anomalies d’éléments traces.",
+          "Des cartes pédologiques et morpho-structurales, reliant géologie, relief et occupation du sol."
+        ]
+      }
+    }
+  }
+}

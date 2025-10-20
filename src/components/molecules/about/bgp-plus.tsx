@@ -1,6 +1,11 @@
+"use client";
+
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 export default function BGPPlus() {
+  const t = useTranslations("AboutUs");
+
   return (
     <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 pb-32">
       <div className="max-w-7xl mx-auto w-full flex flex-col gap-14">
@@ -11,7 +16,7 @@ export default function BGPPlus() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-5xl font-medium text-amber-500 leading-18 is-style-underlined-heading"
           >
-            Qui sommes-nous?
+            {t("plus.title")}
           </motion.h1>
         </div>
 
@@ -22,27 +27,14 @@ export default function BGPPlus() {
           className="w-full flex flex-col gap-12"
         >
           <p className=" text-lg font-normal leading-8">
-            Le Bureau d’Investigations Géologique, Minière et Pétrolière SARL,
-            BIGEMIP SARL, en sigle, est une société de droit congolais, inscrite
-            sous le RCCM CD/KNG/ RCCM/23-B-02483 et IDNAT : 01-B0500-N40997H
-            ayant son siège social dans la ville province de Kinshasa, en
-            République démocratique du Congo. BIGEMIP SARL, offre un paquet de
-            services en ingénierie conseil à des clients aux profils variés,
-            parmi lesquels se trouvent :
+            {t("plus.description")}
           </p>
 
           <ol className="list-decimal flex flex-col gap-2 px-10">
-            <li className="text-lg leading-8">
-              Les investisseurs dans les secteurs miniers et pétroliers
-            </li>
-            <li className="text-lg leading-8">
-              Les opérateurs miniers et pétroliers,
-            </li>
-            <li className="text-lg leading-8">Les exploitants miniers</li>
-            <li className="text-lg leading-8">
-              Les institutions étatiques dévouées au secteur minier et
-              pétrolier.
-            </li>
+            <li className="text-lg leading-8">{t("plus.list.item_1")}</li>
+            <li className="text-lg leading-8">{t("plus.list.item_2")}</li>
+            <li className="text-lg leading-8">{t("plus.list.item_3")}</li>
+            <li className="text-lg leading-8">{t("plus.list.item_4")}</li>
           </ol>
         </motion.div>
       </div>

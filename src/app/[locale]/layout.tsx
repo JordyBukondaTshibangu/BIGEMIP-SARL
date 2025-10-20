@@ -1,10 +1,14 @@
+import SEO from "@/components/molecules/_common/seo";
 import Footer from "@/components/ui/footer";
 import NavigationBar from "@/components/ui/navigation";
 import "leaflet/dist/leaflet.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SEO from "@/components/molecules/_common/seo";
+
+import { routing } from "@/i18n/routing";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,21 +47,31 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
     <html lang="en">
-      <SEO />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NavigationBar />
-        {children}
-        <Footer />
-      </body>
+      <NextIntlClientProvider>
+        <SEO />
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <NavigationBar />
+          {children}
+          <Footer />
+        </body>
+      </NextIntlClientProvider>
     </html>
   );
 }

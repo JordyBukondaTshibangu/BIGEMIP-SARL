@@ -1,3 +1,5 @@
+"use client";
+
 function BGPSolutions() {
   return (
     <section className="max-w-7xl mx-auto flex flex-col gap-8 px-5">

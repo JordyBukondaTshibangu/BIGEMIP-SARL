@@ -1,25 +1,25 @@
 import MissionCard from "@/components/atoms/mission-card";
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 export default function BGPMission() {
+  const t = useTranslations("Services");
+
   const tools = [
     {
-      title: "INNOVATION",
+      title: t("mission.list.tool_1.title"),
       image: "/assets/missions/innovation.png",
-      description:
-        "Toujours à l’affût des nouvelles technologies pour vous offrir des solutions modernes et efficaces dans le métier des investigations géologiques et minières",
+      description: t("mission.list.tool_1.description"),
     },
     {
-      title: "FLEXIBILITE",
+      title: t("mission.list.tool_2.title"),
       image: "/assets/missions/flexibility.png",
-      description:
-        "Chaque projet mérite une attention minutieuse et un engagement total pour garantir un résultat à la hauteur de vos attentes.",
+      description: t("mission.list.tool_2.description"),
     },
     {
-      title: "AFRICANITE",
+      title: t("mission.list.tool_3.title"),
       image: "/assets/missions/africanite.png",
-      description:
-        "bigemip est une société africaine, focalisée sur le marché africain. Notre savoir faire et notre corps de métier propose des solutions pour l’émergence de l’économie de notre beau continent .",
+      description: t("mission.list.tool_3.description"),
     },
   ];
   return (
@@ -32,7 +32,7 @@ export default function BGPMission() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-5xl font-medium text-white is-style-underlined-heading"
           >
-            Notre Mission
+            {t("mission.title")}
           </motion.h1>
         </div>
         <motion.div

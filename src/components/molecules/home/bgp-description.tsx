@@ -1,7 +1,13 @@
+"use client";
+
 import * as motion from "motion/react-client";
 import Image from "next/image";
 
+import { useTranslations } from "next-intl";
+
 function BGPDescription() {
+  const t = useTranslations("HomePage");
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -10,7 +16,7 @@ function BGPDescription() {
       className="max-w-7xl w-full mx-auto flex flex-col gap-12 px-5 py-24"
     >
       <h1 className="text-3xl font-bold text-amber-500">
-        Bienvenue sur BIGEMIP
+        {t("welcome_to_bigemip.title")}
       </h1>
       <div className="flex flex-col md:flex-row justify-between gap-10">
         <div className="flex-1 min-h-full w-full">
@@ -24,29 +30,27 @@ function BGPDescription() {
         </div>
         <div className="flex-1 flex flex-col gap-6">
           <div className="flex flex-col gap-4">
-            <h6 className="text-amber-500 font-bold">A Propos de Nous</h6>
-            <h2 className="text-3xl font-bold">Un appercu de BIGEMIP SARL</h2>
+            <h6 className="text-amber-500 font-bold">
+              {t("welcome_to_bigemip.subtitle")}
+            </h6>
+            <h2 className="text-3xl font-bold">
+              {t("welcome_to_bigemip.second_subtitle")}L
+            </h2>
           </div>
           <p className="text-base leading-8">
-            Le Bureau d&apos;Investigations Géologique, Minière et Pétrolière,
-            <span>BIGEMIP SARL</span> vous accompagne dans l&apos;exploration
-            minière optimale et ciblée, aidée par les technologies les plus
-            avancées.
+            {t("welcome_to_bigemip.description_1")}
+            <span>{t("welcome_to_bigemip.description_1")}</span>{" "}
+            {t("welcome_to_bigemip.description_2")}
           </p>
           <ol className="list-decimal flex flex-col gap-2 px-5 italic">
             <li className="text-base leading-7">
-              Nous évaluons ensemble vos permis de recherche : de la première
-              cartographie géologique en passant par les études géophysiques,
-              géochimiques et la télédétection, jusqu&apos;à l&apos;estimation
-              financière de votre projet minier
+              {t("welcome_to_bigemip.metrics.metric_1")}
             </li>
             <li className="text-base leading-7">
-              Nous vous accompagnons dans toutes les étapes de vos projets de
-              recherche géologique, minière.
+              {t("welcome_to_bigemip.metrics.metric_2")}
             </li>
             <li className="text-base leading-7">
-              Nous proposons les études listées ci-dessus, de manière spécifique
-              ou globale selon vos besoins.
+              {t("welcome_to_bigemip.metrics.metric_3")}
             </li>
           </ol>
         </div>

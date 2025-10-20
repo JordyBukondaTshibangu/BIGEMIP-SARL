@@ -1,8 +1,12 @@
-import ServiceCard from "@/components/atoms/service-card";
-import { useServices } from "@/hooks/useServices";
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
+import ServiceCard from "@/components/atoms/service-card";
+
+import { useServices } from "@/hooks/useServices";
 export default function BGPServices() {
+  const t = useTranslations("Services");
+
   const services = useServices();
   return (
     <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
@@ -14,11 +18,14 @@ export default function BGPServices() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-5xl font-medium text-white is-style-underlined-heading"
         >
-          Nos Services
+          {t("services.title")}
         </motion.h1>
+        <p className="text-white text-lg font-normal -my-10">
+          {t("services.subtitle")}
+        </p>
+
         <p className="text-white text-lg font-normal -my-4">
-          Faites le choix d’un accompagnement expert, à votre image. Chez
-          BIGEMIP, nous proposons des solutions adaptées à chaque besoin :
+          {t("services.description")}
         </p>
         <motion.div
           initial={{ opacity: 0, y: 40 }}

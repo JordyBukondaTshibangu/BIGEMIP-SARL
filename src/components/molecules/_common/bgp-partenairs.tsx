@@ -1,4 +1,7 @@
+"use client";
+
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const partners = [
@@ -19,6 +22,8 @@ const partners = [
   },
 ];
 function BGPPartners() {
+  const t = useTranslations("HomePage");
+
   return (
     <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20">
       <div className="max-w-7xl w-full mx-auto flex flex-col gap-20">
@@ -28,7 +33,7 @@ function BGPPartners() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-3xl font-bold text-amber-500"
         >
-          Nos Partenaires
+          {t("partners.title")}
         </motion.h1>
 
         <motion.div

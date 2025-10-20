@@ -4,6 +4,7 @@ import Button from "@/components/atoms/button";
 import Feedback from "@/components/atoms/feedback";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -30,6 +31,8 @@ const contactFormSchema = z.object({
 type ContactFormInputs = z.infer<typeof contactFormSchema>;
 
 function BGPContactForm() {
+  const t = useTranslations("ContactUs");
+
   const {
     register,
     handleSubmit,
@@ -50,9 +53,13 @@ function BGPContactForm() {
   >("idle");
 
   const formFields = [
-    { name: "name", type: "text", placeholder: "Votre Nom..." },
-    { name: "email", type: "text", placeholder: "Votre Email..." },
-    { name: "subject", type: "text", placeholder: "Sujet..." },
+    { name: "name", type: "text", placeholder: t("form.placeholder.name") },
+    { name: "email", type: "text", placeholder: t("form.placeholder.email") },
+    {
+      name: "subject",
+      type: "text",
+      placeholder: t("form.placeholder.subject"),
+    },
   ];
 
   const handleFormSubmit = async (data: ContactFormInputs) => {
@@ -96,8 +103,7 @@ function BGPContactForm() {
       >
         <div className="flex flex-col gap-4">
           <p className="text-2xl font-normal leading-10 text-gray-500">
-            Une question, un besoin ? Remplissez le formulaire de contact
-            ci-dessous. Nous reviendrons vers vous dans les plus brefs délais.
+            {t("form.description")}
           </p>
         </div>
 
@@ -113,7 +119,7 @@ function BGPContactForm() {
 
           {submissionStatus === "success" && (
             <Feedback
-              message="Message envoyé"
+              message={t("form.feedback.success")}
               type="success"
               onClose={handleClosePopup}
             />
@@ -121,7 +127,7 @@ function BGPContactForm() {
 
           {submissionStatus === "error" && (
             <Feedback
-              message="Une erreur est survenue"
+              message={t("form.feedback.error")}
               type="error"
               onClose={handleClosePopup}
             />
@@ -139,9 +145,9 @@ function BGPContactForm() {
                 <input
                   key={idx}
                   type={field.type}
+                  disabled={isSubmitting}
                   placeholder={field.placeholder}
                   {...register(field.name as keyof ContactFormInputs)}
-                  disabled={isSubmitting}
                   className="border-0 border-b border-gray-300 h-10 outline-none text-[#7A7A7A] px-2"
                 />
                 {errors[field.name as keyof ContactFormInputs] && (
@@ -153,7 +159,7 @@ function BGPContactForm() {
             ))}
 
             <textarea
-              placeholder="Votre Message..."
+              placeholder={t("form.placeholder.text")}
               {...register("message")}
               className="border-0 border-b border-gray-300 h-40 outline-none text-[#7A7A7A] px-2"
             />
@@ -162,7 +168,11 @@ function BGPContactForm() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                buttonText={isSubmitting ? "Envoi en cours..." : "Envoyer"}
+                buttonText={
+                  isSubmitting
+                    ? t("form.placeholder.button_sending")
+                    : t("form.placeholder.button")
+                }
               />
             </div>
           </motion.form>

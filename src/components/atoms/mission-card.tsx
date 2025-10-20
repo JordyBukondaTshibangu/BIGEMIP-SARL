@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import Button from "./button";
 
@@ -26,7 +27,9 @@ const MissionCard = ({
       <p className="text-sm md:text-md text-[#7A7A7A] leading-7 flex-1 mb-auto min-h-[120px] ">
         {description}
       </p>
-      <Button buttonText="Decouvrez nos Projets" />
+      <Link href="/services/en-savoir-plus">
+        <Button buttonText="Decouvrez nos Projets" />
+      </Link>
     </div>
   </div>
 );
