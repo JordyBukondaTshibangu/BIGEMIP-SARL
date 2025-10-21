@@ -8,7 +8,7 @@ export default function BGPDatabase() {
 
   return (
     <section className="bg-[#1e2236] h-[80%] py-20 pb-36 px-5">
-      <div className="max-w-7xl mx-auto w-full flex flex-col-reverse lg:flex-row-reverse  gap-20">
+      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col-reverse lg:flex-row-reverse  gap-20">
         <div className="w-full flex flex-col gap-10">
           <motion.h1
             initial={{ opacity: 0, x: 60 }}

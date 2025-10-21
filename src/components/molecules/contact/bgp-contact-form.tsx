@@ -94,12 +94,12 @@ function BGPContactForm() {
   const handleClosePopup = () => setSubmissionStatus("idle");
 
   return (
-    <section className="w-full mx-auto flex flex-col gap-36 px-5 py-20 ">
+    <section className="w-full lg:mx-auto flex flex-col gap-36 px-5 py-20 ">
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-7xl mx-auto w-full flex flex-col gap-10"
+        className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-10"
       >
         <div className="flex flex-col gap-4">
           <p className="text-2xl font-normal leading-10 text-gray-500">

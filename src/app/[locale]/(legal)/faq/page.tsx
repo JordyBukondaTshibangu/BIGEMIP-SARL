@@ -9,12 +9,12 @@ function Faq() {
     <div className="w-full min-h-screen flex flex-col bg-[#1e2236] pb-48">
       <HeaderTitle title={t("title")} subtitle={t("subtitle")} />
 
-      <section className="w-full mx-auto flex flex-col gap-8 px-5 -mt-12 pb-20">
+      <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 -mt-12 pb-20">
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <p className="text-white text-base font-normal leading-8">
             {t("description")}

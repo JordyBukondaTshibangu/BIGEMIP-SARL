@@ -9,8 +9,8 @@ function AboutUs() {
   return (
     <div className="w-full min-h-screen flex flex-col">
       <HeaderTitle title={t("title")} subtitle={t("subtitle")} />
-      <motion.section className="w-full mx-auto flex flex-col gap-20 px-5 py-20">
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+      <motion.section className="w-full lg:mx-auto flex flex-col gap-20 px-5 py-20">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_1.title")}
           </h3>
@@ -31,7 +31,7 @@ function AboutUs() {
             </motion.ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_2.title")}
           </h3>
@@ -40,7 +40,7 @@ function AboutUs() {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_3.title")}
           </h3>
@@ -65,7 +65,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_4.title")}
           </h3>
@@ -87,7 +87,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_5.title")}
           </h3>
@@ -109,7 +109,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_6.title")}
           </h3>
@@ -129,7 +129,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_7.title")}
           </h3>
@@ -151,7 +151,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_8.title")}
           </h3>
@@ -173,7 +173,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_9.title")}
           </h3>
@@ -187,7 +187,7 @@ function AboutUs() {
             </li>
           </motion.ul>
         </div>
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_10.title")}
           </h3>
@@ -196,7 +196,7 @@ function AboutUs() {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_11.title")}
           </h3>
@@ -211,7 +211,7 @@ function AboutUs() {
           </motion.ul>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_12.title")}
           </h3>
@@ -226,7 +226,7 @@ function AboutUs() {
           </motion.ul>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_13.title")}
           </h3>
@@ -235,7 +235,7 @@ function AboutUs() {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4">
+        <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_14.title")}
           </h3>

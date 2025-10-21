@@ -50,7 +50,7 @@ function Footer() {
 
   return (
     <footer className="w-full bg-[#1e2236] min-w-screen">
-      <div className="max-w-7xl mx-auto w-full py-16 flex flex-col gap-20 px-5">
+      <div className="lg:max-w-7xl lg:mx-auto w-full py-16 flex flex-col gap-20 px-5">
         <div className="flex justify-between flex-wrap gap-6">
           {contactBlocks.map((block, i) => (
             <ContactInfoBlock key={i} {...block} />

@@ -24,7 +24,7 @@ export default function BGPMission() {
   ];
   return (
     <section className="bg-[#1e2236] h-[80%] py-20 md:py-48 px-5">
-      <div className="max-w-7xl mx-auto w-full flex flex-col  gap-20">
+      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col  gap-20">
         <div className="w-full md:w-1/3">
           <motion.h1
             initial={{ opacity: 0, x: 60 }}

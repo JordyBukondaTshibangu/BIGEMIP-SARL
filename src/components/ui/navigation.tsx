@@ -40,7 +40,7 @@ function NavigationBar() {
   return (
     <>
       <nav className="bg-[#1e2236] shadow-lg sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="lg:max-w-7xl lg:mx-auto px-6">
           <div className="flex justify-between items-center h-28">
             <Link href="/" className="flex items-center space-x-2">
               <Image
@@ -130,6 +130,19 @@ function NavigationBar() {
               {label}
             </Link>
           ))}
+
+          <select
+            value={locale}
+            onChange={handleChange}
+            disabled={isPending}
+            className="border-[#f0a500] rounded-md border p-4 text-sm text-amber-500 shadow-sm hover:shadow-md transition"
+          >
+            {locales.map((lang) => (
+              <option key={lang.code} value={lang.code}>
+                {lang.label}
+              </option>
+            ))}
+          </select>
           <Link
             key="/contact"
             href="/contact"

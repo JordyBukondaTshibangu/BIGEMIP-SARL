@@ -40,7 +40,7 @@ function BGPMap() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full px-5 flex flex-col md:flex-row gap-16 justify-center"
+          className="lg:max-w-7xl lg:mx-auto w-full px-5 flex flex-col md:flex-row gap-16 justify-center"
         >
           <ContactInfo
             icon={Map}

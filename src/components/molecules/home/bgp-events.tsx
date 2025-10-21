@@ -48,12 +48,12 @@ function BGPEvents() {
   ];
 
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-32 bg-[#1e2236]">
+    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-32 bg-[#1e2236]">
       <motion.div
         initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-7xl w-full mx-auto flex flex-col gap-8 "
+        className="lg:max-w-7xl w-full lg:mx-auto flex flex-col gap-8 "
       >
         <h1 className="text-3xl font-bold text-amber-500">
           {t("events.title")}

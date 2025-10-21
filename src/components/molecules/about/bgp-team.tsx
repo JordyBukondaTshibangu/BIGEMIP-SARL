@@ -56,7 +56,7 @@ function BGPTeam() {
 
   return (
     <section className="py-20 md:py-28">
-      <div className="max-w-7xl mx-auto w-full flex flex-col items-center gap-20">
+      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col items-center gap-20">
         <motion.h1
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}

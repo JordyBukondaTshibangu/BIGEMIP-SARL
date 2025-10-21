@@ -5,11 +5,11 @@ export default function BGPMission() {
 
   return (
     <section className="h-[80%] py-20 pt-36 px-5">
-      <div className="max-w-7xl mx-auto w-full flex flex-col = gap-14">
+      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col = gap-14">
         <h2 className="text-4xl font-extrabold text-amber-500 text-center">
           {t("mission.title")}
         </h2>
-        <p className="text-lg text-center max-w-3xl mx-auto">
+        <p className="text-lg text-center max-w-3xl lg:mx-auto">
           {t("mission.intro")}
         </p>
 

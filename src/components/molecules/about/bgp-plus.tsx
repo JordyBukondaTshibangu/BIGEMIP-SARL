@@ -7,8 +7,8 @@ export default function BGPPlus() {
   const t = useTranslations("AboutUs");
 
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 pb-32">
-      <div className="max-w-7xl mx-auto w-full flex flex-col gap-14">
+    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20 pb-32">
+      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-14">
         <div className="flex flex-col gap-6 md:w-3/4">
           <motion.h1
             initial={{ opacity: 0, x: 40 }}

@@ -10,12 +10,12 @@ function Support() {
     <div className="w-full min-h-screen flex flex-col">
       <HeaderTitle title={t("title")} subtitle={t("description")} />
 
-      <section className="w-full mx-auto flex flex-col gap-20 px-5 py-20">
+      <section className="w-full lg:mx-auto flex flex-col gap-20 px-5 py-20">
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_1.title")}
@@ -46,7 +46,7 @@ function Support() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_2.title")}
@@ -89,7 +89,7 @@ function Support() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_4.title")}
@@ -125,7 +125,7 @@ function Support() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_5.title")}
@@ -152,7 +152,7 @@ function Support() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("content.content_6.title")}

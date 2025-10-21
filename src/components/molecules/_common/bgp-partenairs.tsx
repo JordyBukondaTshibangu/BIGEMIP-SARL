@@ -25,8 +25,8 @@ function BGPPartners() {
   const t = useTranslations("HomePage");
 
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20">
-      <div className="max-w-7xl w-full mx-auto flex flex-col gap-20">
+    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20">
+      <div className="lg:max-w-7xl w-full lg:mx-auto flex flex-col gap-20">
         <motion.h1
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}

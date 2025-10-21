@@ -13,7 +13,7 @@ export default function BGPPourquoiBigemip() {
 
   return (
     <section className="py-20 px-5 md:py-48">
-      <div className="max-w-7xl mx-auto w-full flex flex-col md:items-center gap-20">
+      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col md:items-center gap-20">
         <motion.h1
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}

@@ -6,12 +6,12 @@ import { useTranslations } from "next-intl";
 function BGPContactHeader() {
   const t = useTranslations("ContactUs");
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
+    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-7xl mx-auto w-full flex flex-col gap-10"
+        className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-10"
       >
         <h1 className="text-5xl font-medium text-amber-500 is-style-underlined-heading">
           {t("title")}

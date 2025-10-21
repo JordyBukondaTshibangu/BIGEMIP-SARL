@@ -13,7 +13,7 @@ function BGPDescription() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="max-w-7xl w-full mx-auto flex flex-col gap-12 px-5 py-24"
+      className="lg:max-w-7xl w-full lg:mx-auto flex flex-col gap-12 px-5 py-24"
     >
       <h1 className="text-3xl font-bold text-amber-500">
         {t("welcome_to_bigemip.title")}

@@ -9,8 +9,8 @@ export default function BGPServices() {
 
   const services = useServices();
   return (
-    <section className="w-full mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
-      <div className="max-w-7xl mx-auto w-full flex flex-col gap-20">
+    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
+      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-20">
         <motion.h1
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1 }}

@@ -10,12 +10,12 @@ function PrivacyPolicy() {
     <div className="w-full min-h-screen flex flex-col">
       <HeaderTitle title={t("title")} subtitle={t("description_1")} />
 
-      <section className="w-full mx-auto flex flex-col gap-8 px-5 -mt-12 pb-20 bg-[#1e2236]">
+      <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 -mt-12 pb-20 bg-[#1e2236]">
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <p className="text-white text-base font-normal leading-8">
             {t("description_1")}
@@ -40,12 +40,12 @@ function PrivacyPolicy() {
         </motion.div>
       </section>
 
-      <section className="w-full mx-auto flex flex-col gap-20 px-5 py-20">
+      <section className="w-full lg:mx-auto flex flex-col gap-20 px-5 py-20">
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-8 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-8 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-4xl font-bold">
             {t("main.title")}
@@ -80,7 +80,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_1.title")}
@@ -117,7 +117,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_2.title")}
@@ -155,7 +155,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_3.title")}
@@ -184,7 +184,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_4.title")}
@@ -225,7 +225,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_5.title")}
@@ -238,7 +238,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_6.title")}
@@ -276,7 +276,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_7.title")}
@@ -310,7 +310,7 @@ function PrivacyPolicy() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-7xl mx-auto w-full flex flex-col gap-6 lg:w-3/4"
+          className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4"
         >
           <h3 className="text-[#1e2236] text-3xl font-bold">
             {t("main.content.content_8.title")}
