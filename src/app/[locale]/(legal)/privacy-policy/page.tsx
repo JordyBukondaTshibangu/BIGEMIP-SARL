@@ -7,7 +7,7 @@ function PrivacyPolicy() {
   const t = useTranslations("PrivacyPolicy");
 
   return (
-    <div className="w-full min-h-screen flex flex-col lg:pt-28">
+    <div className="w-full min-h-screen flex flex-col pt-28">
       <HeaderTitle title={t("title")} subtitle={t("description_1")} />
 
       <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 -mt-12 pb-20 bg-[#1e2236]">

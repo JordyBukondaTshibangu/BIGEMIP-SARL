@@ -7,7 +7,7 @@ function Support() {
   const t = useTranslations("Support");
 
   return (
-    <div className="w-full min-h-screen flex flex-col lg:pt-28">
+    <div className="w-full min-h-screen flex flex-col pt-28">
       <HeaderTitle title={t("title")} subtitle={t("subtitle")} />
 
       <section className="w-full lg:mx-auto flex flex-col gap-20 px-5 py-20">

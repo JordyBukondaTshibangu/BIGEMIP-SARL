@@ -6,7 +6,7 @@ function Faq() {
   const t = useTranslations("Faq");
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#1e2236] pb-48 lg:pt-28">
+    <div className="w-full min-h-screen flex flex-col bg-[#1e2236] pb-48 pt-28">
       <HeaderTitle title={t("title")} subtitle={t("subtitle")} />
 
       <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 -mt-12 pb-20">
