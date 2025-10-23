@@ -7,7 +7,7 @@ export default function BGPMapping() {
   const t = useTranslations("More");
 
   return (
-    <section className="bg-[#1e2236] h-[80%] py-20 pt-36 px-5">
+    <section className="bg-[#1e2236] h-[80%] py-20 pt-36 pt-48 px-5">
       <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col lg:flex-row gap-20">
         <div className="w-full flex flex-col gap-10">
           <motion.h1

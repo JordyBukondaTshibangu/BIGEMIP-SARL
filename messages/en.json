@@ -383,6 +383,7 @@
         }
       },
       "content_5": {
+        "title": "📝 Request Tracking",
         "list": {
           "item_1": "Every request is logged and assigned a ticket number.",
           "item_2": "You can track your request via email or phone.",

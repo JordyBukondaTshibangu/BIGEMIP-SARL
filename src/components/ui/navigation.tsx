@@ -39,7 +39,7 @@ function NavigationBar() {
 
   return (
     <>
-      <nav className="bg-[#1e2236] shadow-lg sticky top-0 z-50">
+      <nav className="bg-[#1e2236] shadow-lg fixed top-0 right-0 left-0 min-w-screen z-50">
         <div className="lg:max-w-7xl lg:mx-auto px-6">
           <div className="flex justify-between items-center h-28">
             <Link href="/" className="flex items-center space-x-2">

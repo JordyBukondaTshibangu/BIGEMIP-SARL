@@ -7,7 +7,7 @@ function AboutUs() {
   const t = useTranslations("TermsAndCondition");
 
   return (
-    <div className="w-full min-h-screen flex flex-col">
+    <div className="w-full min-h-screen flex flex-col lg:pt-28">
       <HeaderTitle title={t("title")} subtitle={t("subtitle")} />
       <motion.section className="w-full lg:mx-auto flex flex-col gap-20 px-5 py-20">
         <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-6 lg:w-3/4">

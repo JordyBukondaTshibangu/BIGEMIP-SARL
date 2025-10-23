@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 function BGPContactHeader() {
   const t = useTranslations("ContactUs");
   return (
-    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20 bg-[#1e2236]">
+    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20 pt-48 bg-[#1e2236]">
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}

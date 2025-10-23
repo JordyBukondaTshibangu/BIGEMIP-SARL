@@ -65,7 +65,7 @@ export default async function RootLayout({
       <NextIntlClientProvider>
         <SEO />
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden relative`}
         >
           <NavigationBar />
           {children}
