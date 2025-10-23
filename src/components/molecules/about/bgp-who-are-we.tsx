@@ -15,7 +15,7 @@ function BGPWhoAreWe() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-10"
       >
-        <h1 className="text-5xl font-medium text-amber-500 is-style-underlined-heading">
+        <h1 className="text-5xl font-medium text-amber-500 is-style-underlined-heading leading-16">
           {t("who_are_we.title")}
         </h1>
         <div className="flex flex-col md:flex-row gap-14">
