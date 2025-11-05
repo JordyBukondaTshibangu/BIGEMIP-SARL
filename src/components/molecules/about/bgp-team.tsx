@@ -1,6 +1,6 @@
 "use client";
 
-import { Linkedin, Mail, Twitter } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -30,6 +30,13 @@ function BGPTeam() {
       image: "/assets/team-members/team-member-3.png",
       linkedin: "https://www.linkedin.com/in/rhamia-chakopo-2b3022122/",
       email: "mailto:rhamia.chakopo@bigemip.com",
+    },
+    {
+      name: "Aline Makambo",
+      role: t("team.list.member_7_role"),
+      image: "/assets/team-members/team-member-7.jpg",
+      linkedin: "https://www.linkedin.com/in/aline-maka-3121b1390/",
+      email: "mailto:alinemaheli@bigemip.com",
     },
     {
       name: "Jordan Akwerali S.M",
@@ -83,7 +90,7 @@ function BGPTeam() {
                   width={180}
                   height={180}
                   alt={member.name}
-                  className="object-cover rounded-full"
+                  className="object-cover rounded-full h-40 w-40"
                   priority
                 />
               </div>
@@ -91,16 +98,14 @@ function BGPTeam() {
                 <h4 className="text-xl font-semibold text-[#1e2236]">
                   {member.name}
                 </h4>
-                <span className="text-lg font-medium text-[#1e2236]">
+                <span className="text-lg font-medium text-[#1e2236] min-w-max">
                   {member.role}
                 </span>
                 <div className="flex justify-center gap-4">
                   <a href={member.email} target="_blank">
                     <Mail color="#f99c00" size={18} />
                   </a>
-                  <a href="">
-                    <Twitter color="#f99c00" size={18} />
-                  </a>
+
                   <a href={member.linkedin} target="_blank">
                     <Linkedin color="#f99c00" size={18} />
                   </a>
