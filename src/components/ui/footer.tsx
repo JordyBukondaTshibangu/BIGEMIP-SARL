@@ -20,7 +20,7 @@ function Footer() {
     {
       icon: <Phone size={30} color="#f99c00" />,
       title: t("contact_us"),
-      value: "(+243) 818 354 186  -  (+243) 812 071 429",
+      value: "(+243) 818 354 186  -  (+243) 834 585 397",
     },
     {
       icon: <Mail size={30} color="#f99c00" />,

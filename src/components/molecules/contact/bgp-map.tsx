@@ -53,7 +53,7 @@ function BGPMap() {
             title={t("info.info_2.title")}
             details={[
               "Renelle Tshibangu Tshela",
-              "+243 812 071 429",
+              "(+243) 834 585 397",
               detailTwo,
             ]}
           />
