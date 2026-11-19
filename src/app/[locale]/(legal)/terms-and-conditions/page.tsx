@@ -1,3 +1,6 @@
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/seo";
+import { Breadcrumbs } from "@/components/seo/json-ld";
 import * as motion from "motion/react-client";
 
 import HeaderTitle from "@/components/molecules/_common/header-title";
@@ -248,4 +251,27 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return pageMetadata({ locale, page: "terms", path: "/terms-and-conditions" });
+}
+
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const meta = await getTranslations({ locale, namespace: "Metadata" });
+  const label = await getTranslations({ locale, namespace: "Metadata" });
+
+  return (
+    <>
+      <Breadcrumbs
+        locale={locale}
+        homeLabel={meta("breadcrumb_home")}
+        items={[{ name: label("terms.title"), path: "/terms-and-conditions" }]}
+      />
+      <AboutUs />
+    </>
+  );
+}

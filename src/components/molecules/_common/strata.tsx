@@ -15,6 +15,7 @@ type Stratum = {
   fill: string;
   image: string;
   imageClass?: string;
+  alt: "consulting" | "data_bank" | "software";
   boundary: string;
 };
 
@@ -24,6 +25,7 @@ const STRATA: Stratum[] = [
     colour: "var(--color-laterite)",
     fill: "fill-dots",
     image: "/assets/bigemip-image-14.jpeg",
+    alt: "consulting",
     boundary:
       "M0 48 C 120 30, 240 52, 380 38 S 640 18, 780 34 S 1040 52, 1180 30 S 1380 14, 1440 26 V60 H0 Z",
   },
@@ -32,6 +34,7 @@ const STRATA: Stratum[] = [
     colour: "var(--color-ochre)",
     fill: "fill-dashes",
     image: "/assets/bigemip-image-17.jpeg",
+    alt: "data_bank",
     boundary:
       "M0 30 C 160 44, 300 22, 460 34 S 720 56, 900 40 S 1180 18, 1300 32 S 1420 46, 1440 40 V60 H0 Z",
   },
@@ -40,6 +43,7 @@ const STRATA: Stratum[] = [
     colour: "var(--color-schist)",
     fill: "fill-hatch",
     image: "/assets/missions/innovation.png",
+    alt: "software",
     imageClass: "object-contain bg-white p-3",
     boundary:
       "M0 40 C 200 24, 340 50, 520 36 S 820 14, 980 30 S 1240 52, 1440 28 V60 H0 Z",
@@ -62,6 +66,7 @@ export default function Strata({
 }) {
   const t = useTranslations("Services.services.list");
   const ui = useTranslations("UI.strata");
+  const alts = useTranslations("UI.alts");
 
   return (
     <section aria-labelledby="strata-heading" className="bg-basalt text-white">
@@ -124,7 +129,7 @@ export default function Strata({
               <div className="relative aspect-[16/10] overflow-hidden rounded-[3px] shadow-[0_20px_50px_-20px_rgb(0_0_0/0.5)] md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-7">
                 <Image
                   src={s.image}
-                  alt=""
+                  alt={alts(s.alt)}
                   fill
                   sizes="(min-width: 768px) 45vw, 100vw"
                   className={`object-cover ${s.imageClass ?? ""}`}

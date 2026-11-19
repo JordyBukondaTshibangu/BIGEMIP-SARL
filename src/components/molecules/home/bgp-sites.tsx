@@ -1,66 +1,77 @@
-"use client";
-
-import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-import { useTranslations } from "next-intl";
-
-const imagesSite = [
-  "/assets/bigemip-image-12.jpeg",
-  "/assets/bigemip-image-14.jpeg",
-  "/assets/bigemip-image-15.jpeg",
-  "/assets/bigemip-image-16.jpeg",
+/* Portrait field photographs, laid out as an uneven contact sheet. */
+const FIELD_PHOTOS = [
+  {
+    src: "/assets/bigemip-image-18.jpeg",
+    className: "row-span-2 md:col-start-1 md:row-start-1",
+  },
+  {
+    src: "/assets/bigemip-image-16.jpeg",
+    className: "md:col-start-2 md:row-start-1",
+  },
+  {
+    src: "/assets/bigemip-image-20.jpeg",
+    className: "row-span-2 md:col-start-3 md:row-start-1",
+  },
+  {
+    src: "/assets/bigemip-image-12.jpeg",
+    className: "md:col-start-2 md:row-start-2",
+  },
+  {
+    src: "/assets/bigemip-image-17.jpeg",
+    className: "row-span-2 md:col-start-1 md:row-start-3",
+  },
+  {
+    src: "/assets/bigemip-image-14.jpeg",
+    className: "row-span-2 md:col-start-2 md:row-start-3",
+  },
+  {
+    src: "/assets/bigemip-image-15.jpeg",
+    className: "md:col-start-3 md:row-start-3",
+  },
+  {
+    src: "/assets/bigemip-image-10.jpg",
+    className: "md:col-start-3 md:row-start-4",
+  },
 ];
+
 function BGPSites() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("HomePage.sites");
+  const ui = useTranslations("UI.field");
 
   return (
-    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-32 bg-[#1e2236]">
-      <div className="lg:max-w-7xl w-full lg:mx-auto flex flex-col gap-14">
-        <motion.h1
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl font-bold text-amber-500"
-        >
-          {t("sites.title")}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-base leading-8 text-white"
-        >
-          {t("sites.description_1")}
-        </motion.p>
+    <section className="bg-survey py-24 md:py-32">
+      <div className="page-shell grid gap-12 lg:grid-cols-12">
+        <div className="flex flex-col gap-6 lg:col-span-4">
+          <h2 className="type-title text-[2rem] md:text-[2.6rem]">
+            {ui("title")}
+          </h2>
+          <p className="type-lede text-ink-muted">{t("description_1")}</p>
+          <p>{t("description_2")}</p>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-base leading-8 text-white"
+        <div
+          role="group"
+          aria-label={ui("alt")}
+          className="grid grid-flow-dense auto-rows-[9rem] grid-cols-2 gap-3 sm:auto-rows-[11rem] md:grid-cols-3 lg:col-span-8"
         >
-          {t("sites.description_2")}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col h-full md:grid md:grid-cols-4 gap-5 overflow-auto flex-nowrap"
-        >
-          {imagesSite.map((image, index) => (
-            <div key={index} className="flex-1 w-full h-full">
+          {FIELD_PHOTOS.map((photo, i) => (
+            <div
+              key={photo.src}
+              className={`relative overflow-hidden rounded-[3px] bg-survey-2 ${photo.className}`}
+            >
               <Image
-                src={image}
-                alt="BIGEMIP Image"
-                className="w-full h-full object-cover"
-                width={500}
-                height={500}
+                src={photo.src}
+                alt={i === 0 ? ui("alt") : ""}
+                fill
+                sizes="(min-width: 1024px) 22vw, (min-width: 768px) 33vw, 50vw"
+                className="object-cover"
               />
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

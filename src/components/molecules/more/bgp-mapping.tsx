@@ -3,7 +3,7 @@ import FeatureRow from "./feature-row";
 
 export default function BGPMapping() {
   const t = useTranslations("More");
-  const ui = useTranslations("UI.more");
+  const alts = useTranslations("UI.alts");
 
   return (
     <section className="py-10 md:py-16">
@@ -12,14 +12,14 @@ export default function BGPMapping() {
           title={t("mapping.title")}
           points={t.raw("mapping.points") as string[]}
           image="/assets/bigemip-image-11.jpg"
-          imageAlt={ui("image_alt")}
+          imageAlt={alts("mapping")}
           accent="var(--color-schist)"
         />
         <FeatureRow
           title={t("consulting.title")}
           description={t("consulting.description")}
           image="/assets/bigemip-image-14.jpeg"
-          imageAlt={ui("consulting.title")}
+          imageAlt={alts("consulting")}
           accent="var(--color-laterite)"
           reverse
         />
@@ -27,7 +27,7 @@ export default function BGPMapping() {
           title={t("database.title")}
           points={t.raw("database.points") as string[]}
           image="/assets/bigemip-image-4.jpg"
-          imageAlt={t("database.title")}
+          imageAlt={alts("database")}
           accent="var(--color-ochre)"
         />
       </div>

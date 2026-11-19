@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 
 export default function BGPServices() {
   const t = useTranslations("Services.services");
+  const alts = useTranslations("UI.alts");
 
   return (
     <PageHeader
@@ -13,7 +14,10 @@ export default function BGPServices() {
           <p className="text-white/65">{t("description")}</p>
         </>
       }
-      image={{ src: "/assets/bigemip-image-10.jpg", alt: "" }}
+      image={{
+        src: "/assets/bigemip-image-10.jpg",
+        alt: alts("services_header"),
+      }}
     />
   );
 }

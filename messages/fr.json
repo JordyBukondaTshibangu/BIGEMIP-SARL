@@ -692,6 +692,60 @@
       "directions": "Itinéraire",
       "error_fallback": "Le message n'a pas pu être envoyé. Écrivez-nous directement à contact@bigemip.com.",
       "dismiss": "Fermer"
+    },
+    "alts": {
+      "consulting": "Géologue de BIGEMIP relevant un affleurement rocheux",
+      "data_bank": "Équipe BIGEMIP en relevé de terrain sur une piste de latérite",
+      "software": "Coupe géologique dans le logiciel Geoscan",
+      "services_header": "Vue aérienne d'une mine à ciel ouvert avec engins de chantier",
+      "mapping": "Engins miniers sur un front de taille",
+      "database": "Camion minier sur un site d'exploitation"
     }
+  },
+  "Metadata": {
+    "site_name": "BIGEMIP SARL",
+    "default_title": "BIGEMIP | Géologie, mines et pétrole en RDC",
+    "home": {
+      "title": "BIGEMIP | Géologie, mines et pétrole en RDC",
+      "description": "Bureau d'études à Kinshasa : cartographie géologique, géophysique, géochimie, télédétection et estimation de projets miniers et pétroliers en RDC."
+    },
+    "services": {
+      "title": "Services de conseil géologique et minier",
+      "description": "Conseil géologique et géophysique, banque de données d'actifs et logiciel Geoscan pour investisseurs et opérateurs miniers en RDC."
+    },
+    "more": {
+      "title": "Cartographie, SIG et logiciels miniers",
+      "description": "Cartes géologiques, géophysiques et minières, outils SIG, WebGIS et bases de données d'actifs conçus par BIGEMIP pour vos projets en RDC."
+    },
+    "about": {
+      "title": "À propos de BIGEMIP et de notre équipe",
+      "description": "BIGEMIP SARL, bureau d'ingénieurs-conseils immatriculé à Kinshasa, accompagne investisseurs, opérateurs miniers et institutions. Rencontrez l'équipe."
+    },
+    "contact": {
+      "title": "Contact et demande de consultation",
+      "description": "Contactez BIGEMIP au 9, avenue du Port, Gombe, Kinshasa. Téléphone, e-mail et formulaire pour vos projets géologiques, miniers et pétroliers."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "description": "Réponses aux questions fréquentes sur les prestations, le support et la facturation de BIGEMIP SARL."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Comment BIGEMIP SARL collecte, utilise et protège vos données personnelles."
+    },
+    "terms": {
+      "title": "Conditions générales",
+      "description": "Conditions générales d'utilisation du site et des services de BIGEMIP SARL."
+    },
+    "support": {
+      "title": "Support et assistance",
+      "description": "Obtenir de l'aide de l'équipe BIGEMIP pour nos services et nos solutions logicielles."
+    },
+    "careers": {
+      "title": "Carrières",
+      "description": "Carrières chez BIGEMIP SARL."
+    },
+    "breadcrumb_home": "Accueil",
+    "og_alt": "BIGEMIP — investigations géologiques, minières et pétrolières en RDC"
   }
 }

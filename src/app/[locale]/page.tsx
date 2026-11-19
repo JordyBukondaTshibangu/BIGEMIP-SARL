@@ -1,3 +1,5 @@
+import { setRequestLocale } from "next-intl/server";
+import { pageMetadata } from "@/lib/seo";
 import BGPPartners from "@/components/molecules/_common/bgp-partenairs";
 import BGPGetInTouch from "@/components/molecules/_common/get-in-touch";
 import Strata from "@/components/molecules/_common/strata";
@@ -8,7 +10,7 @@ import BGPProjectsShowCases from "@/components/molecules/home/bgp-projects-showc
 import BGPSites from "@/components/molecules/home/bgp-sites";
 import { useTranslations } from "next-intl";
 
-export default function Home() {
+function Home() {
   const ui = useTranslations("UI.strata");
   const services = useTranslations("Services.services");
 
@@ -24,4 +26,18 @@ export default function Home() {
       <BGPGetInTouch />
     </>
   );
+}
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return pageMetadata({ locale, page: "home", path: "" });
+}
+
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return <Home />;
 }

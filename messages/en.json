@@ -691,6 +691,60 @@
       "directions": "Get directions",
       "error_fallback": "The message could not be sent. Please email us directly at contact@bigemip.com.",
       "dismiss": "Dismiss"
+    },
+    "alts": {
+      "consulting": "BIGEMIP geologist logging a rock outcrop",
+      "data_bank": "BIGEMIP team surveying along a laterite track",
+      "software": "Geological cross-section in the Geoscan software",
+      "services_header": "Aerial view of an open-pit mine with heavy equipment",
+      "mapping": "Mining equipment working a pit face",
+      "database": "Mining truck on an operating site"
     }
+  },
+  "Metadata": {
+    "site_name": "BIGEMIP SARL",
+    "default_title": "BIGEMIP | Geology, mining and petroleum in the DRC",
+    "home": {
+      "title": "BIGEMIP | Geology, mining and petroleum in the DRC",
+      "description": "Kinshasa consultancy for geological mapping, geophysics, geochemistry, remote sensing and valuation of mining and petroleum projects in the DRC."
+    },
+    "services": {
+      "title": "Geological and mining consulting services",
+      "description": "Geological and geophysical consulting, asset data banks and Geoscan software: BIGEMIP services for investors and mining operators in the DRC."
+    },
+    "more": {
+      "title": "Mapping, GIS and mining software",
+      "description": "Geological, geophysical and mining maps, GIS and WebGIS tools, and asset databases built by BIGEMIP for projects in the DRC."
+    },
+    "about": {
+      "title": "About BIGEMIP and our team",
+      "description": "BIGEMIP SARL is a consulting engineering firm registered in Kinshasa, serving investors, mining operators and public institutions. Meet the team."
+    },
+    "contact": {
+      "title": "Contact us and request a consultation",
+      "description": "Reach BIGEMIP at 9 Avenue du Port, Gombe, Kinshasa. Phone, email and contact form for geological, mining and petroleum projects."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Answers to common questions about BIGEMIP SARL services, support and billing."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "How BIGEMIP SARL collects, uses and protects your personal data."
+    },
+    "terms": {
+      "title": "Terms and conditions",
+      "description": "Terms of use for the BIGEMIP SARL website and services."
+    },
+    "support": {
+      "title": "Support",
+      "description": "Get help from the BIGEMIP team with our services and software solutions."
+    },
+    "careers": {
+      "title": "Careers",
+      "description": "Careers at BIGEMIP SARL."
+    },
+    "breadcrumb_home": "Home",
+    "og_alt": "BIGEMIP — geological, mining and petroleum investigations in the DRC"
   }
 }

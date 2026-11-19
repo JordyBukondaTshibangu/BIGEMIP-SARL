@@ -1,3 +1,6 @@
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/seo";
+import { Breadcrumbs } from "@/components/seo/json-ld";
 import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
 
@@ -42,4 +45,27 @@ function Faq() {
   );
 }
 
-export default Faq;
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return pageMetadata({ locale, page: "faq", path: "/faq" });
+}
+
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const meta = await getTranslations({ locale, namespace: "Metadata" });
+  const label = await getTranslations({ locale, namespace: "Metadata" });
+
+  return (
+    <>
+      <Breadcrumbs
+        locale={locale}
+        homeLabel={meta("breadcrumb_home")}
+        items={[{ name: label("faq.title"), path: "/faq" }]}
+      />
+      <Faq />
+    </>
+  );
+}
