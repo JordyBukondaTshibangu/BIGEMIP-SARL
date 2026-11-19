@@ -1,6 +1,21 @@
-import json, re, sys
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
-ROOT = sys.argv[1]
+"""Generate the 1200x630 social share images (public/og/og-{fr,en}.jpg).
+
+Usage: python scripts/generate-og-images.py <project root>
+Requires: pillow, fonttools, brotli
+"""
+import json, os, re, sys, tempfile
+from PIL import Image, ImageDraw, ImageFont
+from fontTools.ttLib import TTFont
+from fontTools.varLib import instancer
+
+ROOT = sys.argv[1] if len(sys.argv) > 1 else "."
+
+# Static instances of the variable Archivo font (Pillow needs fixed weights/widths).
+FONT_DIR = tempfile.mkdtemp()
+for name, loc in (("display", {"wght": 750, "wdth": 125}), ("body", {"wght": 450, "wdth": 100}), ("sub", {"wght": 650, "wdth": 112})):
+    inst = instancer.instantiateVariableFont(TTFont(f"{ROOT}/src/fonts/archivo-variable.woff2"), loc)
+    inst.flavor = None
+    inst.save(os.path.join(FONT_DIR, f"archivo-{name}.ttf"))
 W, H = 1200, 630
 BASALT = (31, 29, 51); ORE = (212, 168, 75)
 src = Image.open(f"{ROOT}/public/assets/bigemip-image-3.jpg").convert("RGB")
@@ -22,7 +37,17 @@ for y in range(H):
 img.alpha_composite(band)
 # contour lines from the generated set
 ts = open(f"{ROOT}/src/lib/contours.ts").read()
-hero = json.loads(re.search(r"heroContours: ContourSet = (\{.*?\});", ts).group(1))
+# Read the hero contour set; works whether or not Prettier has reformatted the file.
+block = ts[ts.index("heroContours"):]
+block = block[: block.index("panelContours")] if "panelContours" in block else block
+hero = {
+    "w": int(re.search(r'"?w"?\s*:\s*(\d+)', block).group(1)),
+    "h": int(re.search(r'"?h"?\s*:\s*(\d+)', block).group(1)),
+    "paths": [
+        {"d": d, "major": m == "true"}
+        for d, m in re.findall(r'"?d"?\s*:\s*"([^"]+)"\s*,\s*"?major"?\s*:\s*(true|false)', block)
+    ],
+}
 lines = Image.new("RGBA", (W * 2, H * 2)); d = ImageDraw.Draw(lines)
 sx, sy = W * 2 / hero["w"], H * 2 / hero["h"]; s = max(sx, sy)
 for p in hero["paths"]:
@@ -30,7 +55,7 @@ for p in hero["paths"]:
     if len(pts) > 1: d.line(pts, fill=(*ORE, 150 if p["major"] else 75), width=3 if p["major"] else 2)
 img.alpha_composite(lines.resize((W, H), Image.LANCZOS))
 mark = Image.open(f"{ROOT}/public/assets/bigemip-mark.png").convert("RGBA"); mark.thumbnail((86, 70))
-F = lambda n, sz: ImageFont.truetype(f"/tmp/archivo-{n}.ttf", sz)
+F = lambda n, sz: ImageFont.truetype(os.path.join(FONT_DIR, f"archivo-{n}.ttf"), sz)
 copy = {
   "fr": ("Investigations géologiques,", "minières et pétrolières en RDC", "Cartographie · Géophysique · Géochimie · SIG"),
   "en": ("Geological, mining and", "petroleum investigations in the DRC", "Mapping · Geophysics · Geochemistry · GIS"),
