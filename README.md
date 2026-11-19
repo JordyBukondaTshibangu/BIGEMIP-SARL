@@ -85,7 +85,7 @@ src/
     site.ts             Site URL, company facts, list of public routes
     seo.ts              Per-page metadata builder
     contours.ts         Generated topographic contour paths
-  middleware.ts         Locale detection and redirects
+  proxy.ts              Locale detection and redirects (Next.js 16 "proxy", formerly middleware)
 ```
 
 ## Editing content
