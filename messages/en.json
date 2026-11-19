@@ -578,5 +578,119 @@
         ]
       }
     }
+  },
+  "UI": {
+    "nav": {
+      "mapping": "Mapping & software",
+      "contact": "Contact",
+      "menu": "Open menu",
+      "close": "Close menu",
+      "language": "Language",
+      "home_label": "BIGEMIP home"
+    },
+    "hero": {
+      "headline": "Geological, mining and petroleum investigations in the DRC",
+      "primary": "Explore our services",
+      "secondary": "Request a consultation",
+      "facts": {
+        "office_label": "Head office",
+        "office_value": "Gombe, Kinshasa",
+        "partners_label": "Partner firms",
+        "partners_value": "USA, France, Tunisia, UAE",
+        "registration_label": "Registration",
+        "registration_value": "RCCM CD/KNG/RCCM/23-B-02483"
+      },
+      "scroll": "Scroll to the overview"
+    },
+    "process": {
+      "title": "From research permit to project valuation",
+      "steps_title": "How a permit is assessed",
+      "steps": {
+        "step_1": {
+          "title": "Geological mapping",
+          "text": "Place the permit in its regional and local geological context."
+        },
+        "step_2": {
+          "title": "Geophysics",
+          "text": "Detect magnetic, density, conductivity and radiometric anomalies."
+        },
+        "step_3": {
+          "title": "Geochemistry",
+          "text": "Sample soils and rock to confirm trace-element anomalies."
+        },
+        "step_4": {
+          "title": "Remote sensing",
+          "text": "Read structure and alteration from satellite imagery."
+        },
+        "step_5": {
+          "title": "Financial estimation",
+          "text": "Turn the geological model into a costed mining project."
+        }
+      },
+      "field_note": {
+        "title": "Field survey",
+        "text": "Logging an outcrop"
+      },
+      "photo_alt": "A BIGEMIP geologist examining a rock outcrop"
+    },
+    "strata": {
+      "title": "What we do",
+      "details": "See how this service works",
+      "all": "All mapping and software services"
+    },
+    "field": {
+      "title": "In the field",
+      "alt": "BIGEMIP geologists on a field survey"
+    },
+    "geology": {
+      "map_alt": "Elevation map of the Democratic Republic of the Congo",
+      "pit_alt": "Open-pit mine seen from above"
+    },
+    "events": {
+      "past": "Past",
+      "upcoming": "Upcoming"
+    },
+    "partners": {
+      "intro": "We work alongside specialist firms to bring the right technology to each project."
+    },
+    "cta": {
+      "call": "Call us",
+      "email": "Email us"
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "subscribe": "Subscribe by email",
+      "explore": "Explore",
+      "legal": "Legal",
+      "follow": "Follow BIGEMIP"
+    },
+    "about": {
+      "registration_label": "Registered in Kinshasa",
+      "clients_title": "Who we work with",
+      "email_member": "Email {name}",
+      "linkedin_member": "{name} on LinkedIn",
+      "gallery_alt": "BIGEMIP field and mine-site photography"
+    },
+    "services_page": {
+      "stats_title": "BIGEMIP in figures"
+    },
+    "more": {
+      "title": "Mapping, data and software",
+      "intro": "Beyond field consulting, BIGEMIP builds the maps, databases and GIS tools your teams use every day.",
+      "image_alt": "Mining operations photographed on a BIGEMIP assignment"
+    },
+    "contact": {
+      "form_title": "Send us a message",
+      "labels": {
+        "name": "Full name",
+        "email": "Email address",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "hours": "Office hours",
+      "directions": "Get directions",
+      "error_fallback": "The message could not be sent. Please email us directly at contact@bigemip.com.",
+      "dismiss": "Dismiss"
+    }
   }
 }

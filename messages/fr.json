@@ -1,8 +1,8 @@
 {
   "Navigation": {
-    "home": "Acceuil",
-    "services": "Nos Services",
-    "about": "A Propos de Nous",
+    "home": "Accueil",
+    "services": "Nos services",
+    "about": "À propos",
     "button": "Contactez-nous"
   },
   "Footer": {
@@ -39,19 +39,19 @@
     "hero": {
       "title": "BIGEMIP SARL",
       "title_description_1": "Bureau d'Investigations Géologique, Minière et Pétrolière SARL.",
-      "description": "BIGEMIPvous accompagne dans l'exploration minière optimale et ciblée, aidée par les technologies les plus avancées.",
-      "button": "Decouvrez nos Projets"
+      "description": "BIGEMIP vous accompagne dans l'exploration minière optimale et ciblée, aidée par les technologies les plus avancées.",
+      "button": "Découvrez nos projets"
     },
     "welcome_to_bigemip": {
       "title": "Bienvenue sur BIGEMIP",
-      "subtitle": "A Propos de Nous",
-      "second_subtitle": "Un appercu de BIGEMIP SARL",
+      "subtitle": "À propos de nous",
+      "second_subtitle": "Un aperçu de BIGEMIP SARL",
       "description_1": "Le Bureau d'Investigations Géologique, Minière et Pétrolière,",
       "description_2": "vous accompagne dans l'exploration minière optimale et ciblée, aidée par les technologies les plus avancées.",
       "description_3": "BIGEMIP SARL, offre un paquet de services en ingénierie conseil à des clients aux profils variés, parmi lesquels se trouvent :",
       "metrics": {
         "metric_1": "Nous évaluons ensemble vos permis de recherche : de la première cartographie géologique en passant par les études géophysiques, géochimiques et la télédétection, jusqu'à l'estimation financière de votre projet minier",
-        "metric_2": " Nous vous accompagnons dans toutes les étapes de vos projets de recherche géologique, minière.",
+        "metric_2": "Nous vous accompagnons dans toutes les étapes de vos projets de recherche géologique, minière.",
         "metric_3": "Nous proposons les études listées ci-dessus, de manière spécifique ou globale selon vos besoins."
       }
     },
@@ -118,15 +118,15 @@
       "list": {
         "service_1": {
           "title": "CONSULTING",
-          "description": "Acquisition des données géologiques et géophysique, Accompagnement dans toutes les phases de vos projets de recherche géologique, minière"
+          "description": "Acquisition des données géologiques et géophysiques, accompagnement dans toutes les phases de vos projets de recherche géologique et minière."
         },
         "service_2": {
-          "title": "BANQUE DES DONNEES",
+          "title": "BANQUE DES DONNÉES",
           "description": "Évaluation technique et opérationnelle des actifs (capacités, état, mise en service, localisation GPS, photos horodatées)."
         },
         "service_3": {
           "title": "SOLUTIONS LOGICIELLES",
-          "description": "Distribution et formation au logiciel geoscan avec le partenaire international geosigmoide"
+          "description": "Distribution et formation au logiciel Geoscan avec le partenaire international Geosigmoid."
         }
       }
     },
@@ -578,6 +578,120 @@
           "Des cartes pédologiques et morpho-structurales, reliant géologie, relief et occupation du sol."
         ]
       }
+    }
+  },
+  "UI": {
+    "nav": {
+      "mapping": "Cartographie & logiciels",
+      "contact": "Contact",
+      "menu": "Ouvrir le menu",
+      "close": "Fermer le menu",
+      "language": "Langue",
+      "home_label": "Accueil BIGEMIP"
+    },
+    "hero": {
+      "headline": "Investigations géologiques, minières et pétrolières en RDC",
+      "primary": "Découvrir nos services",
+      "secondary": "Demander une consultation",
+      "facts": {
+        "office_label": "Siège",
+        "office_value": "Gombe, Kinshasa",
+        "partners_label": "Sociétés partenaires",
+        "partners_value": "États-Unis, France, Tunisie, Émirats",
+        "registration_label": "Immatriculation",
+        "registration_value": "RCCM CD/KNG/RCCM/23-B-02483"
+      },
+      "scroll": "Aller à la présentation"
+    },
+    "process": {
+      "title": "Du permis de recherche à l'évaluation du projet",
+      "steps_title": "Comment nous évaluons un permis",
+      "steps": {
+        "step_1": {
+          "title": "Cartographie géologique",
+          "text": "Situer le permis dans son contexte géologique régional et local."
+        },
+        "step_2": {
+          "title": "Géophysique",
+          "text": "Détecter les anomalies magnétiques, de densité, de conductivité et radiométriques."
+        },
+        "step_3": {
+          "title": "Géochimie",
+          "text": "Échantillonner sols et roches pour confirmer les anomalies en éléments traces."
+        },
+        "step_4": {
+          "title": "Télédétection",
+          "text": "Lire la structure et les altérations sur l'imagerie satellite."
+        },
+        "step_5": {
+          "title": "Estimation financière",
+          "text": "Transformer le modèle géologique en projet minier chiffré."
+        }
+      },
+      "field_note": {
+        "title": "Mission de terrain",
+        "text": "Relevé sur affleurement"
+      },
+      "photo_alt": "Un géologue de BIGEMIP examine un affleurement rocheux"
+    },
+    "strata": {
+      "title": "Nos métiers",
+      "details": "Voir le détail de ce service",
+      "all": "Tous nos services de cartographie et logiciels"
+    },
+    "field": {
+      "title": "Sur le terrain",
+      "alt": "Géologues de BIGEMIP en mission de terrain"
+    },
+    "geology": {
+      "map_alt": "Carte altimétrique de la République démocratique du Congo",
+      "pit_alt": "Mine à ciel ouvert vue du ciel"
+    },
+    "events": {
+      "past": "Passé",
+      "upcoming": "À venir"
+    },
+    "partners": {
+      "intro": "Nous travaillons avec des sociétés spécialisées pour apporter la bonne technologie à chaque projet."
+    },
+    "cta": {
+      "call": "Appelez-nous",
+      "email": "Écrivez-nous"
+    },
+    "footer": {
+      "rights": "Tous droits réservés.",
+      "subscribe": "S'abonner par e-mail",
+      "explore": "Explorer",
+      "legal": "Informations légales",
+      "follow": "Suivre BIGEMIP"
+    },
+    "about": {
+      "registration_label": "Immatriculée à Kinshasa",
+      "clients_title": "Avec qui nous travaillons",
+      "email_member": "Écrire à {name}",
+      "linkedin_member": "{name} sur LinkedIn",
+      "gallery_alt": "Photographies de terrain et de sites miniers BIGEMIP"
+    },
+    "services_page": {
+      "stats_title": "BIGEMIP en chiffres"
+    },
+    "more": {
+      "title": "Cartographie, données et logiciels",
+      "intro": "Au-delà du conseil de terrain, BIGEMIP produit les cartes, les bases de données et les outils SIG que vos équipes utilisent au quotidien.",
+      "image_alt": "Opérations minières photographiées lors d'une mission BIGEMIP"
+    },
+    "contact": {
+      "form_title": "Envoyez-nous un message",
+      "labels": {
+        "name": "Nom complet",
+        "email": "Adresse e-mail",
+        "subject": "Objet",
+        "message": "Message"
+      },
+      "hours": "Heures d'ouverture",
+      "directions": "Itinéraire",
+      "error_fallback": "Le message n'a pas pu être envoyé. Écrivez-nous directement à contact@bigemip.com.",
+      "dismiss": "Fermer"
     }
   }
 }

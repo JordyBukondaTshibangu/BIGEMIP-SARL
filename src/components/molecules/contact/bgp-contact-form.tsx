@@ -3,7 +3,6 @@
 import Button from "@/components/atoms/button";
 import Feedback from "@/components/atoms/feedback";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -52,15 +51,31 @@ function BGPContactForm() {
     "idle" | "success" | "error"
   >("idle");
 
+  const ui = useTranslations("UI.contact");
+
   const formFields = [
-    { name: "name", type: "text", placeholder: t("form.placeholder.name") },
-    { name: "email", type: "text", placeholder: t("form.placeholder.email") },
+    {
+      name: "name",
+      type: "text",
+      autoComplete: "name",
+      label: ui("labels.name"),
+    },
+    {
+      name: "email",
+      type: "email",
+      autoComplete: "email",
+      label: ui("labels.email"),
+    },
     {
       name: "subject",
       type: "text",
-      placeholder: t("form.placeholder.subject"),
+      autoComplete: "off",
+      label: ui("labels.subject"),
     },
-  ];
+  ] as const;
+
+  const inputClass =
+    "w-full rounded-[3px] border border-ink/20 bg-white px-4 py-3 text-ink outline-none transition-colors placeholder:text-ink/40 focus:border-ink focus:ring-2 focus:ring-ore/60 disabled:opacity-60 aria-[invalid=true]:border-laterite";
 
   const handleFormSubmit = async (data: ContactFormInputs) => {
     setSubmissionStatus("idle");
@@ -74,12 +89,10 @@ function BGPContactForm() {
         body: JSON.stringify(data),
       });
 
-      console.log("Response:", response);
-
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(
-          errorData.message || "Something went wrong on the server."
+          errorData.message || "Something went wrong on the server.",
         );
       }
 
@@ -94,91 +107,109 @@ function BGPContactForm() {
   const handleClosePopup = () => setSubmissionStatus("idle");
 
   return (
-    <section className="w-full lg:mx-auto flex flex-col gap-36 px-5 py-20 ">
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-10"
+    <div className="flex flex-col gap-8 rounded-[3px] border border-ink/10 bg-white p-6 shadow-[0_30px_60px_-40px_rgb(31_29_51/0.45)] md:p-10">
+      <h2 className="type-title text-[1.6rem] md:text-[1.9rem]">
+        {ui("form_title")}
+      </h2>
+
+      {submissionStatus === "success" && (
+        <Feedback
+          message={t("form.feedback.success")}
+          type="success"
+          onClose={handleClosePopup}
+          dismissLabel={ui("dismiss")}
+        />
+      )}
+      {submissionStatus === "error" && (
+        <Feedback
+          message={ui("error_fallback")}
+          type="error"
+          onClose={handleClosePopup}
+          dismissLabel={ui("dismiss")}
+        />
+      )}
+
+      <form
+        className="flex flex-col gap-6"
+        onSubmit={handleSubmit(handleFormSubmit)}
+        noValidate
       >
-        <div className="flex flex-col gap-4">
-          <p className="text-2xl font-normal leading-10 text-gray-500">
-            {t("form.description")}
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-14 md:gap-24 w-full md:w-1/2">
-          <motion.h3
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-2xl text-black font-bold italic"
-          >
-            {/* Votre email a ete envoyé */}
-          </motion.h3>
-
-          {submissionStatus === "success" && (
-            <Feedback
-              message={t("form.feedback.success")}
-              type="success"
-              onClose={handleClosePopup}
-            />
-          )}
-
-          {submissionStatus === "error" && (
-            <Feedback
-              message={t("form.feedback.error")}
-              type="error"
-              onClose={handleClosePopup}
-            />
-          )}
-
-          <motion.form
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col gap-8 text-black"
-            onSubmit={handleSubmit(handleFormSubmit)}
-          >
-            {formFields.map((field, idx) => (
-              <div key={idx} className="w-full flex flex-col gap-1">
+        <div className="grid gap-6 sm:grid-cols-2">
+          {formFields.map((field) => {
+            const error = errors[field.name];
+            return (
+              <div
+                key={field.name}
+                className={`flex flex-col gap-2 ${field.name === "subject" ? "sm:col-span-2" : ""}`}
+              >
+                <label
+                  htmlFor={`contact-${field.name}`}
+                  className="text-[0.95rem] font-medium"
+                >
+                  {field.label}
+                </label>
                 <input
-                  key={idx}
+                  id={`contact-${field.name}`}
                   type={field.type}
+                  autoComplete={field.autoComplete}
                   disabled={isSubmitting}
-                  placeholder={field.placeholder}
-                  {...register(field.name as keyof ContactFormInputs)}
-                  className="border-0 border-b border-gray-300 h-10 outline-none text-[#7A7A7A] px-2"
+                  aria-invalid={error ? true : undefined}
+                  aria-describedby={
+                    error ? `contact-${field.name}-error` : undefined
+                  }
+                  {...register(field.name)}
+                  className={inputClass}
                 />
-                {errors[field.name as keyof ContactFormInputs] && (
-                  <p className="mt-1 text-sm text-red-600">
-                    {errors[field.name as keyof ContactFormInputs]?.message}
+                {error && (
+                  <p
+                    id={`contact-${field.name}-error`}
+                    className="text-sm text-laterite"
+                  >
+                    {error.message}
                   </p>
                 )}
               </div>
-            ))}
-
-            <textarea
-              placeholder={t("form.placeholder.text")}
-              {...register("message")}
-              className="border-0 border-b border-gray-300 h-40 outline-none text-[#7A7A7A] px-2"
-            />
-
-            <div className="flex justify-start w-fit">
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                buttonText={
-                  isSubmitting
-                    ? t("form.placeholder.button_sending")
-                    : t("form.placeholder.button")
-                }
-              />
-            </div>
-          </motion.form>
+            );
+          })}
         </div>
-      </motion.div>
-    </section>
+
+        <div className="flex flex-col gap-2">
+          <label
+            htmlFor="contact-message"
+            className="text-[0.95rem] font-medium"
+          >
+            {ui("labels.message")}
+          </label>
+          <textarea
+            id="contact-message"
+            rows={6}
+            disabled={isSubmitting}
+            aria-invalid={errors.message ? true : undefined}
+            aria-describedby={
+              errors.message ? "contact-message-error" : undefined
+            }
+            {...register("message")}
+            className={`${inputClass} resize-y`}
+          />
+          {errors.message && (
+            <p id="contact-message-error" className="text-sm text-laterite">
+              {errors.message.message}
+            </p>
+          )}
+        </div>
+
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className="self-start"
+          buttonText={
+            isSubmitting
+              ? t("form.placeholder.button_sending")
+              : t("form.placeholder.button")
+          }
+        />
+      </form>
+    </div>
   );
 }
 

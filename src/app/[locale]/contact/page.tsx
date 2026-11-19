@@ -4,11 +4,19 @@ import BGPMap from "@/components/molecules/contact/bgp-map";
 
 function Contact() {
   return (
-    <div className="w-full min-h-screen flex flex-col">
+    <>
       <BGPContactHeader />
-      <BGPContactForm />
-      <BGPMap />
-    </div>
+      <section className="py-20 md:py-28">
+        <div className="page-shell grid gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <BGPContactForm />
+          </div>
+          <div className="lg:col-span-4 lg:col-start-9">
+            <BGPMap />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

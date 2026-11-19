@@ -1,42 +1,54 @@
-"use client";
-
-import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
 
+const CLIENT_KEYS = ["item_1", "item_2", "item_3", "item_4"] as const;
+
 export default function BGPPlus() {
-  const t = useTranslations("AboutUs");
+  const t = useTranslations("AboutUs.plus");
+  const ui = useTranslations("UI.about");
 
   return (
-    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20 pb-32">
-      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col gap-14">
-        <div className="flex flex-col gap-6 md:w-3/4">
-          <motion.h1
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl font-medium text-amber-500 leading-18 is-style-underlined-heading"
-          >
-            {t("plus.title")}
-          </motion.h1>
+    <section className="py-24 md:py-32">
+      <div className="page-shell grid gap-14 lg:grid-cols-12">
+        <div className="flex flex-col gap-6 lg:col-span-6">
+          <h2 className="type-title text-[2rem] md:text-[2.6rem]">
+            {t("title")}
+          </h2>
+          <p className="type-lede prose-measure text-ink-muted">
+            {t("description")}
+          </p>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full flex flex-col gap-12"
-        >
-          <p className=" text-lg font-normal leading-8">
-            {t("plus.description")}
-          </p>
+        <div className="flex flex-col gap-10 lg:col-span-5 lg:col-start-8">
+          <dl className="grid gap-5 border-l-2 border-ore pl-6">
+            <div>
+              <dt className="text-sm text-ink-muted">
+                {ui("registration_label")}
+              </dt>
+              <dd className="font-semibold tabular-nums">
+                RCCM CD/KNG/RCCM/23-B-02483
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm text-ink-muted">IDNAT</dt>
+              <dd className="font-semibold tabular-nums">01-B0500-N40997H</dd>
+            </div>
+          </dl>
 
-          <ol className="list-decimal flex flex-col gap-2 px-10">
-            <li className="text-lg leading-8">{t("plus.list.item_1")}</li>
-            <li className="text-lg leading-8">{t("plus.list.item_2")}</li>
-            <li className="text-lg leading-8">{t("plus.list.item_3")}</li>
-            <li className="text-lg leading-8">{t("plus.list.item_4")}</li>
-          </ol>
-        </motion.div>
+          <div>
+            <h3 className="type-sub mb-4 text-lg">{ui("clients_title")}</h3>
+            <ul className="divide-y divide-ink/15 border-y border-ink/15">
+              {CLIENT_KEYS.map((key) => (
+                <li key={key} className="flex items-center gap-4 py-4">
+                  <span
+                    aria-hidden="true"
+                    className="h-2 w-2 shrink-0 rotate-45 bg-laterite"
+                  />
+                  {t(`list.${key}`)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

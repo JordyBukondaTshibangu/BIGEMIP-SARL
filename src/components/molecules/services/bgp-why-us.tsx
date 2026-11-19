@@ -1,58 +1,37 @@
-import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
 
 export default function BGPPourquoiBigemip() {
-  const t = useTranslations("Services");
+  const t = useTranslations("Services.whyUs");
 
   const stats = [
-    { value: "20", label: t("whyUs.stats.stat_1") },
-    { value: "5+", label: t("whyUs.stats.stat_2") },
-    { value: "98%", label: t("whyUs.stats.stat_3") },
-    { value: "20", label: t("whyUs.stats.stat_4") },
+    { value: "20", label: t("stats.stat_1") },
+    { value: "5+", label: t("stats.stat_2") },
+    { value: "98%", label: t("stats.stat_3") },
+    { value: "20", label: t("stats.stat_4") },
   ];
 
   return (
-    <section className="py-20 px-5 md:py-48">
-      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col md:items-center gap-20">
-        <motion.h1
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl md:text-5xl font-medium text-black is-style-underlined-heading-blue"
-        >
-          {t("whyUs.title")}
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-md md:text-2xl font-medium text-black text-center"
-        >
-          {t("whyUs.description")}
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10"
-        >
-          {stats.map((stat, index) => (
+    <section className="py-24 md:py-32">
+      <div className="page-shell flex flex-col gap-12">
+        <div className="flex flex-col gap-4">
+          <h2 className="type-title text-[2rem] md:text-[2.6rem]">
+            {t("title")}
+          </h2>
+          <p className="type-lede text-ink-muted">{t("description")}</p>
+        </div>
+        <dl className="grid grid-cols-1 border-t border-ink/20 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat, i) => (
             <div
-              key={index}
-              className="w-full flex flex-col items-center gap-4"
+              key={i}
+              className="flex flex-col gap-3 border-b border-ink/20 py-8 sm:pr-8 lg:border-b-0 lg:border-r lg:pl-8 lg:first:pl-0 lg:last:border-r-0"
             >
-              <h3 className="text-4xl md:text-6xl font-semibold text-black">
+              <dd className="type-display order-first text-[3.4rem] tabular-nums text-ink">
                 {stat.value}
-              </h3>
-              <span className="text-md md:text-lg font-medium text-black text-center">
-                {stat.label}
-              </span>
+              </dd>
+              <dt className="max-w-[24ch] text-ink-muted">{stat.label}</dt>
             </div>
           ))}
-        </motion.div>
+        </dl>
       </div>
     </section>
   );

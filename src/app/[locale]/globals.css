@@ -1,62 +1,156 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  BIGEMIP — "Cross-section" design system
+  Basalt (the logo's ground), ore gold (the logo's mark), and three
+  stratum colours taken from the field photography: laterite, ochre, schist.
+*/
+
+@theme {
+  --color-basalt: #1f1d33;
+  --color-basalt-2: #29273f;
+  --color-basalt-3: #36344f;
+  --color-ore: #d4a84b;
+  --color-ore-bright: #e6be62;
+  --color-bronze: #8a6420;
+  --color-laterite: #a9512c;
+  --color-ochre: #c08a3e;
+  --color-schist: #4f5866;
+  --color-survey: #f1f2ee;
+  --color-survey-2: #e4e6df;
+  --color-ink: #1f1d33;
+  --color-ink-muted: #565467;
+  --color-mist: #b9b8c6;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --container-page: 80rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
-} */
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background: var(--color-survey);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    font-feature-settings:
+      "ss01",
+      "tnum" 0;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-ore);
+    color: var(--color-basalt);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ore);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
 }
 
-.is-style-underlined-heading {
-  position: relative;
-  margin-bottom: 0.75em !important;
-  padding-bottom: 0.75em;
-}
-.is-style-underlined-heading::before {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  width: 1.5em;
-  height: 3px;
-  content: "";
-  background-color: lab(72.7183% 31.8672 97.9407);
-}
+@layer components {
+  /* Expanded display cut of Archivo — the "stencil on a haul truck" voice. */
+  .type-display {
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-weight: 750;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
 
-.is-style-underlined-heading-blue {
-  position: relative;
-  margin-bottom: 0.75em !important;
-  padding-bottom: 0.75em;
-}
+  .type-title {
+    font-stretch: 118%;
+    font-variation-settings: "wdth" 118;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
 
-.is-style-underlined-heading-blue::before {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 1.5em;
-  height: 3px;
-  content: "";
-  background-color: lab(72.7183% 31.8672 97.9407);
+  .type-sub {
+    font-stretch: 112%;
+    font-variation-settings: "wdth" 112;
+    font-weight: 650;
+    letter-spacing: -0.005em;
+    line-height: 1.25;
+  }
+
+  .type-lede {
+    font-size: 1.1875rem;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  .prose-measure {
+    max-width: 64ch;
+  }
+
+  .page-shell {
+    width: 100%;
+    max-width: var(--container-page);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .page-shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Geological map legend fills — each stratum gets the conventional symbol. */
+  .fill-dots {
+    background-image: radial-gradient(
+      rgb(255 255 255 / 0.16) 1.1px,
+      transparent 1.4px
+    );
+    background-size: 14px 14px;
+  }
+
+  .fill-dashes {
+    /* shale: staggered short dashes */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='16'%3E%3Cg stroke='%23ffffff' stroke-opacity='.16' stroke-width='1.2'%3E%3Cpath d='M2 4h14M20 12h14'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .fill-hatch {
+    background-image: repeating-linear-gradient(
+      -38deg,
+      transparent 0 11px,
+      rgb(255 255 255 / 0.12) 11px 12px
+    );
+  }
+
+  .link-underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    transition: text-decoration-color 0.2s;
+  }
+
+  .link-underline:hover {
+    text-decoration-color: currentColor;
+  }
 }

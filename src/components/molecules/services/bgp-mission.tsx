@@ -1,50 +1,55 @@
-import MissionCard from "@/components/atoms/mission-card";
-import * as motion from "motion/react-client";
+import { ButtonLink } from "@/components/atoms/button";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function BGPMission() {
-  const t = useTranslations("Services");
+  const t = useTranslations("Services.mission");
+  const ui = useTranslations("UI.strata");
 
   const tools = [
+    { key: "tool_1", image: "/assets/bigemip-image-9.jpg", contain: false },
     {
-      title: t("mission.list.tool_1.title"),
-      image: "/assets/missions/innovation.png",
-      description: t("mission.list.tool_1.description"),
-    },
-    {
-      title: t("mission.list.tool_2.title"),
+      key: "tool_2",
       image: "/assets/missions/flexibility.png",
-      description: t("mission.list.tool_2.description"),
+      contain: false,
     },
-    {
-      title: t("mission.list.tool_3.title"),
-      image: "/assets/missions/africanite.png",
-      description: t("mission.list.tool_3.description"),
-    },
-  ];
+    { key: "tool_3", image: "/assets/missions/africanite.png", contain: true },
+  ] as const;
+
   return (
-    <section className="bg-[#1e2236] h-[80%] py-20 md:py-48 px-5">
-      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col  gap-20">
-        <div className="w-full md:w-1/3">
-          <motion.h1
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl font-medium text-white is-style-underlined-heading"
-          >
-            {t("mission.title")}
-          </motion.h1>
+    <section className="bg-white py-24 md:py-32">
+      <div className="page-shell flex flex-col gap-12">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="type-title text-[2rem] md:text-[2.6rem]">
+            {t("title")}
+          </h2>
+          <ButtonLink href="/services/en-savoir-plus" variant="ghost-dark">
+            {ui("all")}
+          </ButtonLink>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full grid grid-cols-1 sm:grid-cols-3 gap-10"
-        >
-          {tools.map((tool, idx) => (
-            <MissionCard key={idx} {...tool} />
+        <ul className="grid gap-10 md:grid-cols-3 md:gap-8">
+          {tools.map((tool) => (
+            <li key={tool.key} className="flex flex-col gap-5">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-[3px] border border-ink/10 bg-survey">
+                <Image
+                  src={tool.image}
+                  alt={tool.key}
+                  fill
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                  className={
+                    tool.contain ? "object-contain p-4" : "object-cover"
+                  }
+                />
+              </div>
+              <h3 className="type-sub text-xl lowercase first-letter:uppercase">
+                {t(`list.${tool.key}.title`)}
+              </h3>
+              <p className="text-ink-muted">
+                {t(`list.${tool.key}.description`)}
+              </p>
+            </li>
           ))}
-        </motion.div>
+        </ul>
       </div>
     </section>
   );

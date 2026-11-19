@@ -1,116 +1,124 @@
-import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
-import Link from "next/link";
-
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
-import Button from "@/atoms/button";
-import ContactInfoBlock from "@/atoms/contact-info-block";
-import SocialIconLink from "@/atoms/social-icon-link";
-
-const socialLinks = [
-  { icon: <Facebook size={20} color="#fff" />, href: "#" },
-  { icon: <Twitter size={20} color="#fff" />, href: "#" },
-  { icon: <Linkedin size={20} color="#fff" />, href: "#" },
-];
+const PHONES = ["+243 818 354 186", "+243 834 585 397"];
+const EMAIL = "contact@bigemip.com";
 
 function Footer() {
   const t = useTranslations("Footer");
+  const nav = useTranslations("Navigation");
+  const ui = useTranslations("UI");
 
-  const contactBlocks = [
-    {
-      icon: <Phone size={30} color="#f99c00" />,
-      title: t("contact_us"),
-      value: "(+243) 818 354 186  -  (+243) 834 585 397",
-    },
-    {
-      icon: <Mail size={30} color="#f99c00" />,
-      title: t("send_us_a_message"),
-      value: "contact@bigemip.com",
-    },
-    {
-      icon: <MapPin size={30} color="#f99c00" />,
-      title: t("address"),
-      value: "9, Avenue du Port, GOMBE, KINSHASA, RDC",
-    },
+  const explore = [
+    { label: nav("home"), href: "/" },
+    { label: nav("services"), href: "/services" },
+    { label: ui("nav.mapping"), href: "/services/en-savoir-plus" },
+    { label: nav("about"), href: "/about" },
+    { label: ui("nav.contact"), href: "/contact" },
   ];
 
-  const quickLinks = [
-    { label: t("quick_links.about"), href: "/about" },
-    { label: t("quick_links.services"), href: "/services" },
-    { label: t("quick_links.projects"), href: "/services" },
-    { label: t("quick_links.careers"), href: "/contact" },
-  ];
-
-  const legalLinks = [
+  const legal = [
     { label: t("legalLinks.privacy"), href: "/privacy-policy" },
     { label: t("legalLinks.TandCs"), href: "/terms-and-conditions" },
     { label: t("legalLinks.support"), href: "/support" },
     { label: t("legalLinks.faq"), href: "/faq" },
   ];
 
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="w-full bg-[#1e2236] min-w-screen">
-      <div className="lg:max-w-7xl lg:mx-auto w-full py-16 flex flex-col gap-20 px-5">
-        <div className="flex justify-between flex-wrap gap-6">
-          {contactBlocks.map((block, i) => (
-            <ContactInfoBlock key={i} {...block} />
-          ))}
+    <footer className="bg-basalt text-white/80">
+      <div className="page-shell grid gap-14 pb-10 pt-20 md:grid-cols-12">
+        <div className="flex flex-col gap-6 md:col-span-5">
+          <Link href="/" className="flex items-center gap-3 self-start">
+            <Image
+              src="/assets/bigemip-mark.png"
+              alt=""
+              width={669}
+              height={525}
+              className="h-10 w-auto"
+            />
+            <span className="type-sub text-xl tracking-[0.06em] text-white">
+              BIGEMIP SARL
+            </span>
+          </Link>
+          <p className="max-w-[42ch]">{t("description")}</p>
+
+          <address className="flex flex-col gap-1.5 not-italic">
+            <span>9, Avenue du Port, Gombe, Kinshasa, RDC</span>
+            {PHONES.map((p) => (
+              <a
+                key={p}
+                href={`tel:${p.replaceAll(" ", "")}`}
+                className="link-underline self-start text-white"
+              >
+                {p}
+              </a>
+            ))}
+            <a
+              href={`mailto:${EMAIL}`}
+              className="link-underline self-start text-white"
+            >
+              {EMAIL}
+            </a>
+          </address>
         </div>
 
-        <div className="flex justify-between flex-wrap gap-12 border-t border-[#343940] pt-8">
-          <div className="w-full lg:max-w-md flex flex-col gap-4">
-            <h3 className="text-3xl font-medium text-white">{t("title")}</h3>
-            <p className="text-white leading-7">{t("description")}</p>
-            <div className="flex gap-4">
-              {socialLinks.map((link, i) => (
-                <SocialIconLink key={i} {...link} />
-              ))}
-            </div>
-          </div>
+        <nav
+          aria-label={ui("footer.explore")}
+          className="md:col-span-2 md:col-start-7"
+        >
+          <h2 className="type-sub mb-4 text-sm text-ore">
+            {ui("footer.explore")}
+          </h2>
+          <ul className="flex flex-col gap-2.5">
+            {explore.map(({ label, href }) => (
+              <li key={href}>
+                <Link href={href} className="hover:text-white">
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          <div className="w-full lg:w-1/4">
-            <h3 className="font-medium text-amber-500">
-              {t("quick_links.title")}
-            </h3>
-            <ul className="flex flex-col gap-2 list-disc px-5 py-4">
-              {quickLinks.map(({ label, href }) => (
-                <li key={label} className="text-white hover:text-amber-500">
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <nav aria-label={ui("footer.legal")} className="md:col-span-2">
+          <h2 className="type-sub mb-4 text-sm text-ore">
+            {ui("footer.legal")}
+          </h2>
+          <ul className="flex flex-col gap-2.5">
+            {legal.map(({ label, href }) => (
+              <li key={href}>
+                <Link href={href} className="hover:text-white">
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          <div className="w-full lg:w-1/4">
-            <h3 className="font-medium text-amber-500">
-              {t("legalLinks.title")}
-            </h3>
-            <ul className="flex flex-col gap-2 list-disc px-5 py-4">
-              {legalLinks.map(({ label, href }) => (
-                <li key={href} className="text-white hover:text-amber-500">
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="w-full md:max-w-1/2 lg:max-w-md flex flex-col gap-4">
-            <h3 className="font-medium text-amber-500">
-              {t("newsletter.title")}
-            </h3>
-            <p className="text-white leading-7">{t("newsletter.title")}</p>
-            <Button buttonText="S'abonner" />
-          </div>
+        <div className="flex flex-col gap-4 md:col-span-2">
+          <h2 className="type-sub text-sm text-ore">{t("newsletter.title")}</h2>
+          <p className="text-[0.95rem]">{t("newsletter.description")}</p>
+          <a
+            href={`mailto:${EMAIL}?subject=Newsletter%20BIGEMIP`}
+            className="link-underline self-start font-semibold text-white"
+          >
+            {ui("footer.subscribe")}
+          </a>
         </div>
+      </div>
 
-        <div className="flex justify-between items-center border-t border-[#343940] py-8 flex-wrap gap-4">
-          <p className="text-white text-sm">
-            BIGEMIP SRAL © 2023. Tous droits r&eacute;serv&eacute;s.
+      <div className="page-shell">
+        <div className="flex flex-col gap-2 border-t border-white/12 py-7 text-sm text-white/55 sm:flex-row sm:justify-between">
+          <p>
+            © {year} BIGEMIP SARL. {ui("footer.rights")}
           </p>
-          <div className="flex gap-4 text-gray-400">
-            <Link href="/terms-and-conditions">Terms & Conditions</Link>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-          </div>
+          <p className="flex flex-wrap gap-x-5">
+            <span>RCCM CD/KNG/RCCM/23-B-02483</span>
+            <span>IDNAT 01-B0500-N40997H</span>
+          </p>
         </div>
       </div>
     </footer>

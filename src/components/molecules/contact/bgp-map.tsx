@@ -1,71 +1,95 @@
-"use client";
-
-import { BriefcaseBusiness, Map, Phone } from "lucide-react";
-import * as motion from "motion/react-client";
+import { Building2, Clock, MapPin, Phone, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-type ContactInfoBlockProps = {
-  icon: React.ElementType;
-  title: string;
-  details: string[];
-};
+const ADDRESS = "9, Avenue du Port, Gombe, Kinshasa, RDC";
 
-const ContactInfo = ({ title, details, icon: Icon }: ContactInfoBlockProps) => (
-  <div className="flex-1 flex flex-col gap-4">
-    <div className="flex items-center gap-4">
-      <Icon size={36} color="#f99c00" strokeWidth={2} />
-      <h4 className="text-3xl font-semibold text-white">{title}</h4>
-    </div>
-    <div className="flex flex-col gap-1 px-12">
-      {details.map((line, index) => (
-        <span key={index} className="text-lg text-white">
-          {line}
-        </span>
-      ))}
-    </div>
-  </div>
-);
-
+/* Contact details column (formerly the full-bleed "map" banner). */
 function BGPMap() {
-  const t = useTranslations("ContactUs");
-
-  const detailOne = t("info.info_1.details") as string;
-  const detailTwo = t("info.info_2.details") as string;
-  const detailThree = t("info.info_3.details") as string;
+  const t = useTranslations("ContactUs.info");
+  const ui = useTranslations("UI.contact");
 
   return (
-    <section className="relative bg-[url('/assets/bigemip-image-3.jpg')] bg-cover w-full flex flex-col items-center md:min-h-[95%]">
-      <div className="flex flex-col gap-48 md:items-center w-full h-full bg-black/70 py-48 md:py-72">
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="lg:max-w-7xl lg:mx-auto w-full px-5 flex flex-col md:flex-row gap-16 justify-center"
-        >
-          <ContactInfo
-            icon={Map}
-            title={t("info.info_1.title")}
-            details={[detailOne]}
-          />
-
-          <ContactInfo
-            icon={Phone}
-            title={t("info.info_2.title")}
-            details={[
-              "Renelle Tshibangu Tshela",
-              "(+243) 834 585 397",
-              detailTwo,
-            ]}
-          />
-
-          <ContactInfo
-            icon={BriefcaseBusiness}
-            title={t("info.info_3.title")}
-            details={["David Mutumbo", detailThree]}
-          />
-        </motion.div>
+    <aside className="flex flex-col gap-10">
+      <div className="flex gap-4">
+        <MapPin
+          aria-hidden="true"
+          className="mt-1 shrink-0 text-bronze"
+          size={22}
+        />
+        <div className="flex flex-col gap-1">
+          <h2 className="type-sub text-lg">{t("info_1.title")}</h2>
+          <p>{t("info_1.details")}</p>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline self-start font-semibold"
+          >
+            {ui("directions")}
+          </a>
+        </div>
       </div>
-    </section>
+
+      <div className="flex gap-4">
+        <Phone
+          aria-hidden="true"
+          className="mt-1 shrink-0 text-bronze"
+          size={22}
+        />
+        <div className="flex flex-col gap-1">
+          <h2 className="type-sub text-lg">{t("info_2.title")}</h2>
+          <p className="text-ink-muted">Renelle Tshibangu Tshela</p>
+          <a href="tel:+243834585397" className="link-underline self-start">
+            +243 834 585 397
+          </a>
+          <a href="tel:+243818354186" className="link-underline self-start">
+            +243 818 354 186
+          </a>
+        </div>
+      </div>
+
+      <div className="flex gap-4">
+        <Mail
+          aria-hidden="true"
+          className="mt-1 shrink-0 text-bronze"
+          size={22}
+        />
+        <div className="flex flex-col gap-1">
+          <h2 className="type-sub text-lg">Email</h2>
+          <a
+            href="mailto:contact@bigemip.com"
+            className="link-underline self-start"
+          >
+            contact@bigemip.com
+          </a>
+        </div>
+      </div>
+
+      <div className="flex gap-4">
+        <Clock
+          aria-hidden="true"
+          className="mt-1 shrink-0 text-bronze"
+          size={22}
+        />
+        <div className="flex flex-col gap-1">
+          <h2 className="type-sub text-lg">{ui("hours")}</h2>
+          <p>{t("info_2.details")}</p>
+        </div>
+      </div>
+
+      <div className="flex gap-4 border-t border-ink/15 pt-8">
+        <Building2
+          aria-hidden="true"
+          className="mt-1 shrink-0 text-bronze"
+          size={22}
+        />
+        <div className="flex flex-col gap-1">
+          <h2 className="type-sub text-lg">{t("info_3.title")}</h2>
+          <p className="text-ink-muted">David Mutumbo</p>
+          <p className="text-[0.95rem] text-ink-muted">{t("info_3.details")}</p>
+        </div>
+      </div>
+    </aside>
   );
 }
 

@@ -1,59 +1,37 @@
-"use client";
-
-import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
+import { Cpu, Globe2, Layers, Target } from "lucide-react";
+
+const ITEMS = [
+  { key: "vision_1", Icon: Globe2 },
+  { key: "vision_2", Icon: Layers },
+  { key: "vision_3", Icon: Target },
+  { key: "vision_4", Icon: Cpu },
+] as const;
 
 export default function BGPVision() {
-  const t = useTranslations("AboutUs");
+  const t = useTranslations("AboutUs.vision");
 
   return (
-    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-20 pb-56 bg-[#1e2236]">
-      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col = gap-14">
-        <div className="flex flex-col gap-6 md:w-3/4">
-          <motion.h1
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-5xl font-medium text-amber-500 leading-18 is-style-underlined-heading"
-          >
-            {t("vision.title")}
-          </motion.h1>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10"
-        >
-          <div className="flex gap-6">
-            <span className="text-6xl font-semibold text-white">1</span>
-            <span className="text-lg font-medium text-white">
-              {t("vision.list.vision_1")}
-            </span>
-          </div>
-
-          <div className="flex gap-6">
-            <span className="text-6xl font-semibold text-white">2</span>
-            <span className="text-lg font-medium text-white">
-              {t("vision.list.vision_2")}
-            </span>
-          </div>
-
-          <div className="flex gap-6">
-            <span className="text-6xl font-semibold text-white">3</span>
-            <span className="text-lg font-medium text-white">
-              {t("vision.list.vision_3")}
-            </span>
-          </div>
-
-          <div className="flex gap-6">
-            <span className="text-6xl font-semibold text-white">4</span>
-            <span className="text-lg font-medium text-white">
-              {t("vision.list.vision_4")}
-            </span>
-          </div>
-        </motion.div>
+    <section className="bg-survey-2 py-24 md:py-32">
+      <div className="page-shell grid gap-12 lg:grid-cols-12">
+        <h2 className="type-title text-[2rem] md:text-[2.6rem] lg:col-span-4">
+          {t("title")}
+        </h2>
+        <ul className="grid gap-px overflow-hidden rounded-[3px] bg-ink/12 sm:grid-cols-2 lg:col-span-8">
+          {ITEMS.map(({ key, Icon }) => (
+            <li key={key} className="flex flex-col gap-5 bg-survey p-8">
+              <Icon
+                aria-hidden="true"
+                size={26}
+                strokeWidth={1.5}
+                className="text-bronze"
+              />
+              <p className="text-[1.05rem] font-medium leading-snug">
+                {t(`list.${key}`)}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

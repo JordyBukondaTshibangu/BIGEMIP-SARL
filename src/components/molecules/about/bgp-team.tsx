@@ -1,20 +1,18 @@
-"use client";
-
 import { Linkedin, Mail } from "lucide-react";
-import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 function BGPTeam() {
   const t = useTranslations("AboutUs");
+  const ui = useTranslations("UI.about");
 
   const teamMembers = [
     {
-      name: "M. Tony Chermani",
+      name: "Tony Chermani",
       role: t("team.list.member_1_role"),
       image: "/assets/team-members/team-member-1.png",
       linkedin: "https://www.linkedin.com/in/tony-chermani-dino-a8a1a5111/",
-      email: "mailto:tonychermani@bigemip.com",
+      email: "tonychermani@bigemip.com",
     },
     {
       name: "Renelle Tshibangu",
@@ -22,98 +20,104 @@ function BGPTeam() {
       image: "/assets/team-members/team-member-2.png",
       linkedin:
         "https://www.linkedin.com/in/renelle-tshela-tshibangu-24439718b/",
-      email: "mailto:renelletshibangu@bigemip.com",
+      email: "renelletshibangu@bigemip.com",
     },
     {
       name: "Rhamia Chakopo",
       role: t("team.list.member_3_role"),
       image: "/assets/team-members/team-member-3.png",
       linkedin: "https://www.linkedin.com/in/rhamia-chakopo-2b3022122/",
-      email: "mailto:rhamia.chakopo@bigemip.com",
+      email: "rhamia.chakopo@bigemip.com",
     },
     {
       name: "Aline Makambo",
       role: t("team.list.member_7_role"),
       image: "/assets/team-members/team-member-7.jpg",
       linkedin: "https://www.linkedin.com/in/aline-maka-3121b1390/",
-      email: "mailto:alinemaheli@bigemip.com",
+      email: "alinemaheli@bigemip.com",
     },
     {
       name: "Jordan Akwerali S.M",
       role: t("team.list.member_4_role"),
       image: "/assets/team-members/team-member-4.png",
       linkedin: "https://www.linkedin.com/in/jordan-akwerali/",
-      email: "mailto:1oPZw@bigemip.com",
+      email: "1oPZw@bigemip.com",
     },
     {
       name: "Emmanuel Asobe",
       role: t("team.list.member_5_role"),
       image: "/assets/team-members/team-member-5.png",
       linkedin: "https://www.linkedin.com/in/emmanuel-asobee-03725632/",
-      email: "mailto:emmanuelasobe@bigemip.com",
+      email: "emmanuelasobe@bigemip.com",
     },
     {
       name: "David Djokaba",
       role: t("team.list.member_6_role"),
       image: "/assets/team-members/team-member-6.png",
       linkedin: "https://www.linkedin.com/in/david-djokaba-61374a333/",
-      email: "mailto:daviddjokaba@bigemip.com",
+      email: "daviddjokaba@bigemip.com",
     },
   ];
 
   return (
-    <section className="py-20 md:py-28">
-      <div className="lg:max-w-7xl lg:mx-auto w-full flex flex-col items-center gap-20">
-        <motion.h1
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl font-medium text-[#1e2236] is-style-underlined-heading-blue"
-        >
+    <section className="border-t border-ink/10 bg-white py-24 md:py-32">
+      <div className="page-shell flex flex-col gap-14">
+        <h2 className="type-title text-[2rem] md:text-[2.6rem]">
           {t("team.title")}
-        </motion.h1>
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20"
-        >
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="w-full flex flex-col gap-4 items-center justify-center"
+        </h2>
+
+        <ul className="grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-4">
+          {teamMembers.map((member, i) => (
+            <li
+              key={member.name}
+              className={`flex flex-col gap-4 ${i === 0 ? "col-span-2" : ""}`}
             >
-              <div className="w-full h-full rounded-full flex items-center justify-center">
+              <div
+                className={`relative overflow-hidden rounded-[3px] bg-survey-2 ${i === 0 ? "aspect-[4/3] md:aspect-[8/5]" : "aspect-[4/5]"}`}
+              >
                 <Image
                   src={member.image}
-                  width={180}
-                  height={180}
                   alt={member.name}
-                  className="object-cover rounded-full h-40 w-40"
-                  priority
+                  fill
+                  sizes={
+                    i === 0
+                      ? "(min-width: 768px) 50vw, 100vw"
+                      : "(min-width: 768px) 25vw, 50vw"
+                  }
+                  className="object-cover object-top"
                 />
               </div>
-              <div className="flex flex-col items-center gap-3 justify-center text-center">
-                <h4 className="text-xl font-semibold text-[#1e2236]">
-                  {member.name}
-                </h4>
-                <span className="text-lg font-medium text-[#1e2236] min-w-max">
-                  {member.role}
-                </span>
-                <div className="flex justify-center gap-4">
-                  <a href={member.email} target="_blank">
-                    <Mail color="#f99c00" size={18} />
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex flex-col">
+                  <h3
+                    className={`type-sub ${i === 0 ? "text-[1.4rem]" : "text-[1.05rem]"}`}
+                  >
+                    {member.name}
+                  </h3>
+                  <p className="text-[0.95rem] text-ink-muted">{member.role}</p>
+                </div>
+                <div className="flex shrink-0 gap-1">
+                  <a
+                    href={`mailto:${member.email}`}
+                    aria-label={ui("email_member", { name: member.name })}
+                    className="rounded-[3px] p-2 text-ink/70 transition-colors hover:bg-ink/5 hover:text-ink"
+                  >
+                    <Mail size={18} />
                   </a>
-
-                  <a href={member.linkedin} target="_blank">
-                    <Linkedin color="#f99c00" size={18} />
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={ui("linkedin_member", { name: member.name })}
+                    className="rounded-[3px] p-2 text-ink/70 transition-colors hover:bg-ink/5 hover:text-ink"
+                  >
+                    <Linkedin size={18} />
                   </a>
                 </div>
               </div>
-            </div>
+            </li>
           ))}
-        </motion.div>
+        </ul>
       </div>
     </section>
   );

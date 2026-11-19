@@ -1,37 +1,57 @@
-"use client";
-
-import Button from "@/components/atoms/button";
-
-import * as motion from "motion/react-client";
+import { ButtonLink } from "@/components/atoms/button";
+import { panelContours } from "@/lib/contours";
+import ContourField from "@/components/ui/contour-field";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 export default function BGPGetInTouch() {
   const t = useTranslations("GetInTouch");
+  const ui = useTranslations("UI.cta");
 
   return (
-    <section className="relative bg-[url('/assets/bigemip-image-2.jpg')] bg-cover w-full flex flex-col items-center min-h-[95%]">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col items-center w-full h-full bg-black/70 gap-20 py-36"
-      >
-        <div className="w-11/12 md:w-1/2 flex flex-col justify-center gap-10 items-center text-center">
-          <h3 className="font-medium  text-md md:text-lg text-amber-500">
-            {t("title")}
-          </h3>
-          <h2 className="text-xl md:text-3xl font-medium text-white leading-10">
-            {t("subtitle")}
-            <span className="block text-[#9b59b6] mt-4">{t("caption")}</span>
+    <section className="relative isolate overflow-hidden bg-basalt-2 text-white">
+      <ContourField
+        set={panelContours}
+        intensity={0.4}
+        className="absolute inset-y-0 right-0 -z-10 h-full w-full md:w-2/3"
+      />
+      <div className="page-shell grid gap-10 py-24 md:grid-cols-12 md:py-28">
+        <div className="flex flex-col gap-6 md:col-span-7">
+          <p className="type-sub text-[0.95rem] text-ore">{t("title")}</p>
+          <h2 className="type-display text-[2.4rem] md:text-[3.4rem]">
+            {t("caption")}
           </h2>
-          <p className="text-base text-white leading-8">{t("description")}</p>
+          <p className="type-lede max-w-[48ch] text-white/80">
+            {t("description")}
+          </p>
         </div>
-
-        <Link href="/contact">
-          <Button buttonText={t("button")} />
-        </Link>
-      </motion.div>
+        <div className="flex flex-col justify-end gap-5 md:col-span-4 md:col-start-9">
+          <ButtonLink
+            href="/contact"
+            variant="ore"
+            className="w-full sm:w-auto"
+          >
+            {t("button")}
+          </ButtonLink>
+          <div className="flex flex-col gap-1 text-white/80">
+            <span className="text-sm text-white/55">{ui("call")}</span>
+            <a
+              href="tel:+243818354186"
+              className="link-underline self-start text-white"
+            >
+              +243 818 354 186
+            </a>
+          </div>
+          <div className="flex flex-col gap-1 text-white/80">
+            <span className="text-sm text-white/55">{ui("email")}</span>
+            <a
+              href="mailto:contact@bigemip.com"
+              className="link-underline self-start text-white"
+            >
+              contact@bigemip.com
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

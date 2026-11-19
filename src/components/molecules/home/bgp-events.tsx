@@ -1,77 +1,74 @@
-"use client";
+import { useLocale, useTranslations } from "next-intl";
 
-import EventCard from "@/components/atoms/event-block";
-import * as motion from "motion/react-client";
+const EVENT_KEYS = ["event_1", "event_2", "event_3", "event_4"] as const;
 
-import { useTranslations } from "next-intl";
-
+/* An agenda, not a card grid: dates are the primary information. */
 function BGPEvents() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("HomePage.events");
+  const ui = useTranslations("UI.events");
+  const locale = useLocale();
+  const now = Date.now();
 
-  const events: { [key: string]: string }[] = [
-    {
-      title: t("events.event_1.title"),
-      subtitle: t("events.event_1.subtitle"),
-      description: t("events.event_1.description"),
-      date: t("events.event_1.date"),
-      displayDate: t("events.event_1.displayDate"),
-      iconSrc: "/assets/icons/event-icon.svg",
-      bgImage: "/assets/bigemip-hero-image.jpg",
-    },
-    {
-      title: t("events.event_2.title"),
-      subtitle: t("events.event_2.subtitle"),
-      description: t("events.event_2.description"),
-      date: t("events.event_2.date"),
-      displayDate: t("events.event_2.displayDate"),
-      iconSrc: "/assets/icons/map-icon.svg",
-      bgImage: "/assets/bigemip-image-2.jpg",
-    },
-    {
-      title: t("events.event_3.title"),
-      subtitle: t("events.event_3.subtitle"),
-      description: t("events.event_3.description"),
-      date: t("events.event_3.date"),
-      displayDate: t("events.event_3.displayDate"),
-      iconSrc: "/assets/icons/conference-icon.svg",
-      bgImage: "/assets/bigemip-image-3.jpg",
-    },
-    {
-      title: t("events.event_4.title"),
-      subtitle: t("events.event_4.subtitle"),
-      description: t("events.event_4.description"),
-      date: t("events.event_4.date"),
-      displayDate: t("events.event_4.displayDate"),
-      iconSrc: "/assets/icons/qa-icon.svg",
-      bgImage: "/assets/bigemip-image-4.jpg",
-    },
-  ];
+  const day = new Intl.DateTimeFormat(locale, {
+    day: "2-digit",
+    timeZone: "UTC",
+  });
+  const month = new Intl.DateTimeFormat(locale, {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 
   return (
-    <section className="w-full lg:mx-auto flex flex-col gap-8 px-5 py-32 bg-[#1e2236]">
-      <motion.div
-        initial={{ opacity: 0, x: 60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="lg:max-w-7xl w-full lg:mx-auto flex flex-col gap-8 "
-      >
-        <h1 className="text-3xl font-bold text-amber-500">
-          {t("events.title")}
-        </h1>
+    <section className="bg-survey-2 py-24 md:py-32">
+      <div className="page-shell grid gap-12 lg:grid-cols-12">
+        <h2 className="type-title text-[2rem] md:text-[2.6rem] lg:col-span-4">
+          {t("title")}
+        </h2>
 
-        <div className="grid grids-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-center">
-          {events.map((event, index) => (
-            <EventCard
-              key={index}
-              title={event.title}
-              subtitle={event.subtitle}
-              description={event.description}
-              displayDate={event.displayDate}
-              bgImage={event.bgImage}
-            />
-          ))}
-        </div>
-      </motion.div>
+        <ol className="divide-y divide-ink/15 border-y border-ink/15 lg:col-span-8">
+          {EVENT_KEYS.map((key) => {
+            const date = new Date(t(`${key}.date`));
+            const past = date.getTime() < now;
+            return (
+              <li
+                key={key}
+                className="grid grid-cols-[4.5rem_1fr] gap-x-6 gap-y-2 py-7 sm:grid-cols-[6rem_1fr_auto]"
+              >
+                <time
+                  dateTime={t(`${key}.date`)}
+                  className="row-span-2 flex flex-col leading-none"
+                >
+                  <span className="type-display text-[2.4rem] tabular-nums">
+                    {day.format(date)}
+                  </span>
+                  <span className="mt-2 text-sm text-ink-muted">
+                    {month.format(date)}
+                  </span>
+                </time>
+                <div className="flex flex-col gap-2">
+                  <span className="text-sm font-semibold text-bronze">
+                    {t(`${key}.subtitle`)}
+                  </span>
+                  <h3 className="type-sub text-[1.2rem]">
+                    {t(`${key}.title`)}
+                  </h3>
+                  <p className="max-w-[60ch] text-ink-muted">
+                    {t(`${key}.description`)}
+                  </p>
+                </div>
+                <span
+                  className={`col-start-2 self-start justify-self-start rounded-full px-3 py-1 text-xs font-semibold sm:col-start-3 sm:row-start-1 ${
+                    past ? "bg-ink/8 text-ink-muted" : "bg-laterite text-white"
+                  }`}
+                >
+                  {past ? ui("past") : ui("upcoming")}
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </section>
   );
 }
